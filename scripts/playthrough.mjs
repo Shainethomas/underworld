@@ -50,6 +50,19 @@ const seedSave = (settings) => {
   return JSON.stringify({ state, version: 3 })
 }
 if (SCENE !== 's01') await page.addInitScript((save) => localStorage.setItem('underworld.save.v2', save), seedSave({}))
+// How long the screen sits black (a set change's fade or a loading veil)
+// while a scene plays: each span, in ms. Printed at the end.
+await page.addInitScript(() => {
+  const w = window
+  w.__black = []
+  let since = 0
+  setInterval(() => {
+    const s = w.__underworld?.store.getState()
+    const on = Boolean(s && s.scene && (s.fade || s.loading))
+    if (on && !since) since = performance.now()
+    if (!on && since) w.__black.push(Math.round(performance.now() - since)), (since = 0)
+  }, 25)
+})
 await page.goto(`${BASE}/?test`, { waitUntil: 'networkidle' })
 await sleep(800)
 await shot('00_menu')
@@ -216,6 +229,8 @@ const final = await page.evaluate(() => {
   return { vars: s.vars, choices: s.choices, flags: s.flags, completed: s.progress.completed, unlocked: s.progress.unlocked }
 })
 console.log('final', JSON.stringify(final))
+const black = await page.evaluate(() => window.__black ?? [])
+console.log(`black screen: ${black.length} times, ${black.reduce((a, b) => a + b, 0)} ms in all (${black.join(', ')})`)
 console.log(`screens: ${n}, errors/warnings: ${errors.length}`)
 for (const e of [...new Set(errors)].slice(0, 40)) console.log(e)
 await browser.close()

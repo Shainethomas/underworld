@@ -59,8 +59,12 @@ class GameEngine {
   frameRate: FrameGovernor | null = null
   /** Main-thread time per frame (game logic + render submission), smoothed. */
   private cpuMs = 0
-  /** Counts set-change fades, so a fade only lifts the one it raised. */
-  private fadeToken = 0
+  /**
+   * A set change is a hard cut, not a fade to black: while the new set is
+   * swapped in, nothing renders, so the canvas keeps showing the old shot's
+   * last frame; the first frame drawn after is the new shot.
+   */
+  private holding = false
   /** Dynamic render resolution within the tier's range. */
   private resolution: ResolutionScaler | null = null
   readonly actors = new Map<ActorId, Actor>()
@@ -206,6 +210,7 @@ class GameEngine {
         locked: frameRate.fixed !== null,
       }))
     bjs.engine.runRenderLoop(() => {
+      if (this.holding) return
       const dt = Math.min(0.05, bjs.engine.getDeltaTime() / 1000)
       headDt = this.paused ? 0 : dt
       const t0 = performance.now()
@@ -246,6 +251,7 @@ class GameEngine {
   detach(): void {
     this.gen++
     this.run++
+    this.holding = false
     this.unsub?.()
     this.unsub = null
     for (const c of this.cleanup) c()
@@ -308,6 +314,7 @@ class GameEngine {
     if (!scene || !this.bjs || !this.envs || !this.library) return
     const gen = ++this.gen
     const run = ++this.run
+    this.holding = false
     const bjs = this.bjs
     const envs = this.envs
     const show = (label: string, progress: number) => gen === this.gen && useGame.getState().setLoading({ label, progress, kind: 'scene' })
@@ -501,19 +508,14 @@ class GameEngine {
 
   private async switchEnv(id: EnvironmentId, fade: boolean): Promise<void> {
     if (this.envId === id || !this.envs) return
-    const store = useGame.getState()
-    if (fade) {
-      this.fadeToken++
-      store.setFade(true)
-      await sleep(480)
-    }
+    if (fade) this.holding = true
     for (const a of this.actors.values()) {
       a.setVisible(false)
       a.setHeight(0)
     }
     this.interaction?.end()
     this.props?.clearDropped()
-    // still streaming: say so over the fade rather than sit on black
+    // still streaming (a slow connection): show the progress instead of a long freeze
     const waiting = !isLoaded(envAssets(id))
     const onProgress = waiting && fade ? (p: number) => useGame.getState().setLoading({ label: 'Loading', progress: p, kind: 'stream' }) : undefined
     const env = await this.envs.switchTo(id, onProgress)
@@ -535,16 +537,13 @@ class GameEngine {
   }
 
   /**
-   * Lifts a set change's fade once the new set's first frames (with the beat
-   * staged) are drawn and the GPU has built their pipelines, so the fade
-   * doesn't open onto a frozen frame. A newer fade keeps its own.
+   * Cuts to the new set: rendering resumes with the beat already staged, so
+   * the first frame drawn is the new shot. A newer cut keeps its own hold.
    */
-  private async revealAfterFade(): Promise<void> {
-    const token = this.fadeToken
-    await this.warmAndSettle(2)
-    if (token !== this.fadeToken) return
+  private revealAfterFade(): void {
     this.frameRate?.hold(1500)
-    useGame.getState().setFade(false)
+    this.holding = false
+    if (useGame.getState().fade) useGame.getState().setFade(false)
   }
 
   private disposeActors(): void {
@@ -569,13 +568,13 @@ class GameEngine {
     const switched = env !== this.envId
     if (switched) {
       await this.switchEnv(env, true)
-      if (gen !== this.gen) return void this.revealAfterFade()
+      if (gen !== this.gen) return this.revealAfterFade()
     }
     const pending = this.pendingInstant
     this.pendingInstant = []
     for (const b of pending) if (this.envOf(s.scene, b) === env) this.applyInstant(b)
     this.stageBeat(beat)
-    if (switched) void this.revealAfterFade()
+    if (switched) this.revealAfterFade()
   }
 
   private resetBeat(): void {
