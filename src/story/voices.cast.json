@@ -1,0 +1,143 @@
+{
+  "_note": "Character briefs (shown at the top of each script sheet in art-source/voices/scripts/) and each character's Kokoro voice: `voice` is one of Kokoro's, or `mix` blends several by weight, read in an American (`lang` 'a') or British ('b') accent; `speed` 1 is normal. After changing someone's voice: npm run voices -- --redo=<speaker> --generate. Compare them with npm run voices -- --audition.",
+  "rookie": {
+    "name": "Rookie",
+    "who": "The player. A young fighter, early twenties, from nothing, working his way into Victor Sable's crew.",
+    "direction": "Low-key and guarded, quietly confident; dry humour. Never shouts unless cornered. Natural, not 'movie tough'.",
+    "kokoro": {
+      "voice": "am_michael",
+      "speed": 1.0
+    }
+  },
+  "lucas": {
+    "name": "Lucas",
+    "who": "Rookie's friend from the gym and Victor's go-between. Late twenties.",
+    "direction": "Warm, quick, a little fast-talking; easy charm. In Scene 04 he's under strain: clipped, nervous, covering it.",
+    "kokoro": {
+      "voice": "am_puck",
+      "speed": 1.06
+    }
+  },
+  "victor": {
+    "name": "Victor Sable",
+    "who": "The boss. Fifties. Owns the gym, the estate, and half the city.",
+    "direction": "Calm, low, unhurried. Never raises his voice; every pause is on purpose. Warm when it suits him, which makes it worse.",
+    "kokoro": {
+      "mix": {
+        "am_fenrir": 0.7,
+        "am_onyx": 0.3
+      },
+      "lang": "a",
+      "speed": 0.86
+    }
+  },
+  "sal": {
+    "name": "Sal",
+    "who": "Runs the warehouse at Pier Nine. Sixties, been on the docks forever.",
+    "direction": "Gravelly, gruff, suspicious; short sentences. Unimpressed by everyone.",
+    "kokoro": {
+      "mix": {
+        "am_santa": 0.5,
+        "am_fenrir": 0.5
+      },
+      "lang": "a",
+      "speed": 0.92
+    }
+  },
+  "nico": {
+    "name": "Nico",
+    "who": "A jumpy contact at Calder Yard who knows he's in over his head.",
+    "direction": "Fast, anxious, talks too much; laughs when he's scared.",
+    "kokoro": {
+      "mix": {
+        "am_eric": 0.6,
+        "am_puck": 0.4
+      },
+      "lang": "a",
+      "speed": 1.12
+    }
+  },
+  "stranger": {
+    "name": "The Stranger",
+    "who": "A Varga crew man watching Calder Yard.",
+    "direction": "Cold, quiet, menacing; very even. Smiles with his voice, never with his words.",
+    "kokoro": {
+      "mix": {
+        "bm_george": 0.8,
+        "am_onyx": 0.2
+      },
+      "lang": "b",
+      "speed": 0.9
+    }
+  },
+  "marco": {
+    "name": "Marco",
+    "who": "A cocky young fighter at the gym who wants Rookie's spot.",
+    "direction": "Brash, loud, showing off for the room; trash talk.",
+    "kokoro": {
+      "mix": {
+        "am_echo": 0.5,
+        "am_puck": 0.5
+      },
+      "lang": "a",
+      "speed": 1.08
+    }
+  },
+  "caller": {
+    "name": "The Caller",
+    "who": "An unknown number on Rookie's phone: someone from the Varga crew.",
+    "direction": "Slow, controlled, threatening; a voice that's done this before. Slightly 'on the phone'.",
+    "kokoro": {
+      "mix": {
+        "bm_fable": 0.6,
+        "bm_daniel": 0.4
+      },
+      "lang": "b",
+      "speed": 0.9
+    }
+  },
+  "local": {
+    "name": "The Resident",
+    "who": "A woman who lives at Mercer House. Fifties or sixties; has seen trouble come and go.",
+    "direction": "Wary, tired, sharp-tongued; warms a little if treated with respect.",
+    "kokoro": {
+      "mix": {
+        "af_sarah": 0.6,
+        "af_heart": 0.4
+      },
+      "lang": "a",
+      "speed": 0.95
+    }
+  },
+  "guard1": {
+    "name": "Bodyguard",
+    "who": "One of Victor's men on the door.",
+    "direction": "Flat, curt, bored authority. Few words.",
+    "kokoro": {
+      "mix": {
+        "am_onyx": 0.6,
+        "am_fenrir": 0.4
+      },
+      "lang": "a",
+      "speed": 0.95
+    }
+  },
+  "sentry": {
+    "name": "Sentry",
+    "who": "One of Victor's men at the gym.",
+    "direction": "Flat, curt.",
+    "kokoro": {
+      "voice": "bm_daniel",
+      "speed": 0.95
+    }
+  },
+  "driver": {
+    "name": "Driver",
+    "who": "Victor's driver.",
+    "direction": "Polite, minimal.",
+    "kokoro": {
+      "voice": "bm_fable",
+      "speed": 1.0
+    }
+  }
+}

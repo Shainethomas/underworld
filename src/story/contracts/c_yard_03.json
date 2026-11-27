@@ -1,0 +1,18 @@
+{
+  "id": "c_yard_03",
+  "kit": "yard",
+  "title": "House Rules",
+  "client": "Victor",
+  "risk": "Medium",
+  "pay": 650,
+  "respect": 22,
+  "mood": "proud",
+  "pitch": "Leon Marsh runs cards in the old signal office and has stopped paying Victor's rake. He says the game's his. Collect.",
+  "cast": { "contact": "dealer", "heavy": "heavy" },
+  "names": { "contact": "Leon", "heavy": "Kurt" },
+  "hotspots": {
+    "contact": "Leon",
+    "clue_a": { "label": "The boxcar", "lines": ["Folding chairs, a crate of whisky, two spare card tables. He's not running one game. He's running three."] },
+    "clue_b": { "label": "The van", "lines": ["A tally behind the sun visor. Friday's pot, eleven hundred. A column marked V, left blank."] }
+  }
+}

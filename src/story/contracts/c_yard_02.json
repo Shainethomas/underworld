@@ -1,0 +1,18 @@
+{
+  "id": "c_yard_02",
+  "kit": "yard",
+  "title": "Left Luggage",
+  "client": "Lucas",
+  "risk": "Low",
+  "pay": 250,
+  "respect": 12,
+  "mood": "scared",
+  "pitch": "A kid sleeping rough in the yard was minding a bag for Lucas. Strangers came asking, and now he won't answer. Get the bag.",
+  "cast": { "contact": "kid", "heavy": "heavy2" },
+  "names": { "contact": "Robbie", "heavy": "Gaz" },
+  "hotspots": {
+    "contact": "Robbie",
+    "clue_a": { "label": "The boxcar", "lines": ["Blankets, a camping stove, a coach timetable. The coast coach is circled twice. He's planning to run."] },
+    "clue_b": { "label": "The van", "lines": ["Lucas's holdall, wedged under the seat of the burned-out van. Tape still on. He hasn't opened it."] }
+  }
+}

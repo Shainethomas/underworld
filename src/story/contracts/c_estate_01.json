@@ -1,0 +1,18 @@
+{
+  "id": "c_estate_01",
+  "kit": "estate",
+  "title": "Hill Insurance",
+  "client": "Lucas",
+  "risk": "Low",
+  "pay": 300,
+  "respect": 15,
+  "mood": "proud",
+  "pitch": "Ambrose Kell pays Victor to keep his hill quiet. Two months now he hasn't. He says he doesn't pay boys.",
+  "cast": { "contact": "fence", "heavy": "heavy" },
+  "names": { "contact": "Ambrose Kell", "heavy": "Dunne" },
+  "hotspots": {
+    "contact": "Ambrose Kell",
+    "clue_a": { "label": "The fountain", "lines": ["New bronze lions on the fountain, the sculptor's chalk still on the plinths. Weeks old, not years. Kell isn't short."] },
+    "clue_b": { "label": "The car by the steps", "lines": ["A new saloon, dealer's tag still on the mirror, bill of sale on the seat. Paid in full, last week."] }
+  }
+}

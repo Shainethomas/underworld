@@ -1,0 +1,18 @@
+{
+  "id": "c_estate_07",
+  "kit": "estate",
+  "title": "The Councillor",
+  "client": "Victor",
+  "risk": "High",
+  "pay": 1000,
+  "respect": 32,
+  "mood": "scared",
+  "pitch": "Councillor Vane took Victor's money and voted Varga's way. Get the money back, or her word for Thursday.",
+  "cast": { "contact": "widow", "heavy": "heavy" },
+  "names": { "contact": "Councillor Vane", "heavy": "Lazar" },
+  "hotspots": {
+    "contact": "Councillor Vane",
+    "clue_a": { "label": "The fountain", "lines": ["A plastic wallet weighted under the fountain's lip. Cash, a thousand by the thickness. She hasn't spent a note of it."] },
+    "clue_b": { "label": "The black car by the house", "lines": ["A typed list of council votes on the passenger seat. Hers is ticked. So is Thursday's. This car isn't hers."] }
+  }
+}

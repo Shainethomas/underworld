@@ -1,0 +1,2163 @@
+{
+  "scene": {
+    "id": "s03",
+    "index": 3,
+    "chapter": {
+      "number": 1,
+      "title": "The First Experiment"
+    },
+    "title": "The First Experiment",
+    "environments": [
+      "lab",
+      "past"
+    ],
+    "cast": [
+      "rookie",
+      "victor",
+      "scientist",
+      "tech1",
+      "tech2",
+      "tech3",
+      "guard1",
+      "guard2"
+    ],
+    "summary": [
+      "timeline_knowledge",
+      "experiment_commitment",
+      "scientist_trust",
+      "don_loyalty",
+      "independence",
+      "don_ambition_knowledge"
+    ],
+    "next": {
+      "id": "s04",
+      "title": "Scene 04"
+    },
+    "outfits": [
+      {
+        "when": {
+          "choice": "dress",
+          "is": "jacket"
+        },
+        "actor": "rookie",
+        "outfit": {
+          "hoodie": false,
+          "jacket": true
+        }
+      }
+    ]
+  },
+  "beats": {
+    "s1_title": {
+      "id": "s1_title",
+      "type": "title",
+      "env": "lab",
+      "cinematic": true,
+      "chapter": "Chapter 1",
+      "title": "The First Experiment",
+      "subtitle": "Scene 3 \u2014 The First Experiment",
+      "shot": {
+        "cam": "machine_orbit"
+      },
+      "cue": {
+        "music": "chronos",
+        "ambience": "lab",
+        "env": [
+          "chamberLit",
+          "machineWake",
+          "board:FINAL CHECKS"
+        ]
+      },
+      "stage": {
+        "rookie": {
+          "at": "pit_rookie",
+          "face": "scientist",
+          "pose": "idle"
+        },
+        "victor": {
+          "at": "pit_don",
+          "face": "scientist",
+          "pose": "idle"
+        },
+        "scientist": {
+          "at": "pit_sci",
+          "face": "victor",
+          "pose": "idle"
+        },
+        "guard1": {
+          "at": "guard_l_deck",
+          "face": "deck_mid",
+          "pose": "arms_crossed"
+        },
+        "guard2": {
+          "at": "guard_r_deck",
+          "face": "deck_mid",
+          "pose": "arms_crossed"
+        },
+        "tech1": {
+          "at": "pit_tech_a",
+          "face": "machine",
+          "routine": [
+            "interact",
+            "pick_up"
+          ]
+        },
+        "tech2": {
+          "at": "pit_tech_b",
+          "face": "machine",
+          "pose": "kneel_work"
+        },
+        "tech3": {
+          "at": "tech3_console",
+          "face": "console_l",
+          "routine": [
+            "interact"
+          ]
+        }
+      }
+    },
+    "s1_open": {
+      "id": "s1_open",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 4.6,
+      "shot": {
+        "cam": "pit_side"
+      }
+    },
+    "s1_l1": {
+      "id": "s1_l1",
+      "type": "line",
+      "stage": {
+        "rookie": {
+          "at": "pit_rookie",
+          "face": "scientist",
+          "pose": "idle"
+        },
+        "victor": {
+          "at": "pit_don",
+          "face": "scientist",
+          "pose": "idle"
+        },
+        "scientist": {
+          "at": "pit_sci",
+          "face": "victor",
+          "pose": "idle"
+        }
+      },
+      "shot": {
+        "cam": "medium:scientist",
+        "push": true
+      }
+    },
+    "s1_l2": {
+      "id": "s1_l2",
+      "type": "line",
+      "shot": {
+        "cam": "close:victor",
+        "push": true
+      }
+    },
+    "s1_l3": {
+      "id": "s1_l3",
+      "type": "line",
+      "shot": {
+        "cam": "close:scientist"
+      }
+    },
+    "s1_l4": {
+      "id": "s1_l4",
+      "type": "line",
+      "gesture": "arms_crossed",
+      "shot": {
+        "cam": "ots:scientist>victor"
+      }
+    },
+    "s1_l5": {
+      "id": "s1_l5",
+      "type": "line",
+      "shot": {
+        "cam": "close:scientist",
+        "push": true
+      }
+    },
+    "s1_l6": {
+      "id": "s1_l6",
+      "type": "line",
+      "shot": {
+        "cam": "low:victor",
+        "side": -1
+      }
+    },
+    "s1_silence": {
+      "id": "s1_silence",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 3.6,
+      "shot": {
+        "cam": "pit_side"
+      },
+      "stage": {
+        "tech1": {
+          "face": "machine",
+          "pose": "idle"
+        },
+        "tech2": {
+          "face": "machine",
+          "pose": "idle"
+        }
+      },
+      "cue": {
+        "timeline": [
+          {
+            "at": 0.3,
+            "stage": {
+              "victor": {
+                "face": "pit_tech_a"
+              }
+            }
+          },
+          {
+            "at": 1.3,
+            "stage": {
+              "victor": {
+                "face": "pit_tech_b"
+              }
+            }
+          },
+          {
+            "at": 2.4,
+            "stage": {
+              "victor": {
+                "face": "rookie"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "s1_explore": {
+      "id": "s1_explore",
+      "type": "explore",
+      "stage": {
+        "rookie": {
+          "at": "pit_rookie",
+          "face": "scientist",
+          "pose": "idle"
+        },
+        "victor": {
+          "at": "pit_don",
+          "face": "scientist",
+          "pose": "idle"
+        },
+        "scientist": {
+          "at": "pit_sci",
+          "face": "victor",
+          "pose": "idle"
+        }
+      },
+      "bounds": {
+        "minX": -5.5,
+        "maxX": 5.2,
+        "minZ": 7.3,
+        "maxZ": 11.8
+      },
+      "hotspots": [
+        {
+          "id": "scientist",
+          "label": "The doctor",
+          "icon": "chat",
+          "at": "pit_sci",
+          "stand": "pit_rookie",
+          "face": "pit_sci",
+          "height": 2,
+          "ends": true
+        },
+        {
+          "id": "platform",
+          "label": "The platform",
+          "icon": "target",
+          "at": "machine_front",
+          "stand": "plinth_front",
+          "face": "platform",
+          "height": 2.6,
+          "sets": {
+            "inspected_platform": true
+          },
+          "lines": [
+            {
+              "speaker": "rookie",
+              "text": "This is where the sample sat."
+            },
+            {
+              "speaker": "rookie",
+              "text": "There's room on it for a man now."
+            }
+          ]
+        },
+        {
+          "id": "cart",
+          "label": "Monitoring cart",
+          "icon": "eye",
+          "at": "cart",
+          "stand": "prep",
+          "face": "cart",
+          "height": 1.9,
+          "sets": {
+            "inspected_cart": true
+          },
+          "lines": [
+            {
+              "speaker": "rookie",
+              "text": "Heart rate, brain activity, blood oxygen. They want to watch every part of whoever goes in."
+            }
+          ]
+        },
+        {
+          "id": "return",
+          "label": "Return system",
+          "icon": "lock",
+          "at": "return_rack",
+          "stand": "sci_rack",
+          "face": "return_rack",
+          "height": 2.7,
+          "sets": {
+            "inspected_return": true
+          },
+          "lines": [
+            {
+              "speaker": "scientist",
+              "text": "That rack is the only way back. The return signal lives in there."
+            },
+            {
+              "speaker": "rookie",
+              "text": "Then nobody touches it."
+            }
+          ]
+        }
+      ]
+    },
+    "s1_hub": {
+      "id": "s1_hub",
+      "type": "choice",
+      "choiceId": "risk",
+      "style": "dialogue",
+      "stage": {
+        "rookie": {
+          "at": "pit_rookie",
+          "face": "scientist",
+          "pose": "idle"
+        },
+        "victor": {
+          "at": "pit_don",
+          "face": "scientist",
+          "pose": "idle"
+        },
+        "scientist": {
+          "at": "pit_sci",
+          "face": "victor",
+          "pose": "idle"
+        }
+      },
+      "shot": {
+        "cam": "ots:scientist>rookie",
+        "arc": 5,
+        "duration": 9
+      },
+      "optionStaging": {
+        "danger": {
+          "icon": "warning"
+        },
+        "odds": {
+          "icon": "target"
+        },
+        "stranded": {
+          "icon": "hourglass"
+        },
+        "enough": {
+          "icon": "skip",
+          "say": false
+        }
+      }
+    },
+    "s1_danger_1": {
+      "id": "s1_danger_1",
+      "type": "line",
+      "shot": {
+        "cam": "close:scientist",
+        "push": true
+      }
+    },
+    "s1_danger_2": {
+      "id": "s1_danger_2",
+      "type": "line",
+      "gesture": "arms_crossed",
+      "shot": {
+        "cam": "ots:rookie>scientist"
+      }
+    },
+    "s1_odds_1": {
+      "id": "s1_odds_1",
+      "type": "line",
+      "shot": {
+        "cam": "close:scientist"
+      }
+    },
+    "s1_odds_2": {
+      "id": "s1_odds_2",
+      "type": "line",
+      "shot": {
+        "cam": "close:rookie",
+        "side": -1
+      }
+    },
+    "s1_odds_3": {
+      "id": "s1_odds_3",
+      "type": "line",
+      "shot": {
+        "cam": "close:scientist",
+        "push": true
+      }
+    },
+    "s1_stranded_1": {
+      "id": "s1_stranded_1",
+      "type": "line",
+      "shot": {
+        "cam": "close:scientist",
+        "push": true
+      }
+    },
+    "s1_stranded_2": {
+      "id": "s1_stranded_2",
+      "type": "line",
+      "shot": {
+        "cam": "close:rookie",
+        "side": -1
+      }
+    },
+    "s1_stranded_3": {
+      "id": "s1_stranded_3",
+      "type": "line",
+      "shot": {
+        "cam": "ots:rookie>scientist"
+      }
+    },
+    "s2_abandon": {
+      "id": "s2_abandon",
+      "type": "line",
+      "gesture": "arms_crossed",
+      "stage": {
+        "rookie": {
+          "at": "pit_rookie",
+          "face": "scientist",
+          "pose": "idle"
+        },
+        "victor": {
+          "at": "pit_don",
+          "face": "scientist",
+          "pose": "idle"
+        },
+        "scientist": {
+          "at": "pit_sci",
+          "face": "victor",
+          "pose": "idle"
+        }
+      },
+      "cue": {
+        "music": null
+      },
+      "shot": {
+        "cam": "close:victor",
+        "push": true
+      }
+    },
+    "s2_look": {
+      "id": "s2_look",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 3.2,
+      "shot": {
+        "cam": "pit_over_rookie"
+      },
+      "stage": {
+        "rookie": {
+          "face": "platform"
+        }
+      }
+    },
+    "s2_reason": {
+      "id": "s2_reason",
+      "type": "choice",
+      "choiceId": "reason",
+      "style": "card",
+      "shot": {
+        "cam": "close:rookie",
+        "side": -1,
+        "push": true
+      },
+      "optionStaging": {
+        "see": {
+          "icon": "eye"
+        },
+        "someone": {
+          "icon": "scales"
+        },
+        "don": {
+          "icon": "crown"
+        }
+      }
+    },
+    "s2_l1": {
+      "id": "s2_l1",
+      "type": "line",
+      "stage": {
+        "rookie": {
+          "face": "scientist"
+        }
+      },
+      "shot": {
+        "cam": "close:rookie",
+        "push": true
+      }
+    },
+    "s2_turn": {
+      "id": "s2_turn",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 2,
+      "shot": {
+        "cam": "pit_side"
+      },
+      "stage": {
+        "victor": {
+          "face": "rookie"
+        },
+        "scientist": {
+          "face": "rookie"
+        },
+        "tech1": {
+          "face": "rookie"
+        },
+        "tech2": {
+          "face": "rookie"
+        }
+      }
+    },
+    "s2_l2": {
+      "id": "s2_l2",
+      "type": "choice",
+      "shot": {
+        "cam": "close:scientist"
+      },
+      "choiceId": "insist",
+      "style": "dialogue",
+      "optionStaging": {
+        "said": {
+          "icon": "chat"
+        },
+        "heard": {
+          "icon": "bolt"
+        },
+        "me": {
+          "icon": "target"
+        }
+      },
+      "echoShot": {
+        "cam": "close:rookie",
+        "side": -1
+      }
+    },
+    "s2_l4": {
+      "id": "s2_l4",
+      "type": "line",
+      "shot": {
+        "cam": "close:victor",
+        "push": true
+      }
+    },
+    "s2_l5": {
+      "id": "s2_l5",
+      "type": "choice",
+      "shot": {
+        "cam": "ots:rookie>scientist"
+      },
+      "choiceId": "understand",
+      "style": "dialogue",
+      "optionStaging": {
+        "enough": {
+          "icon": "scales"
+        },
+        "tell": {
+          "icon": "brain"
+        },
+        "trusts": {
+          "icon": "crown"
+        }
+      },
+      "echoShot": {
+        "cam": "close:rookie",
+        "side": -1
+      }
+    },
+    "s2_l7": {
+      "id": "s2_l7",
+      "type": "choice",
+      "shot": {
+        "cam": "close:scientist",
+        "push": true
+      },
+      "choiceId": "no_guarantee",
+      "style": "dialogue",
+      "optionStaging": {
+        "job": {
+          "icon": "chat"
+        },
+        "line": {
+          "icon": "bolt"
+        },
+        "chance": {
+          "icon": "target"
+        }
+      },
+      "echoShot": {
+        "cam": "close:rookie"
+      }
+    },
+    "s2_l8_warned": {
+      "id": "s2_l8_warned",
+      "type": "line",
+      "shot": {
+        "cam": "close:scientist",
+        "side": -1
+      }
+    },
+    "s2_uneasy": {
+      "id": "s2_uneasy",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 2.2,
+      "shot": {
+        "cam": "close:scientist",
+        "push": true
+      },
+      "stage": {
+        "scientist": {
+          "pose": "arms_crossed"
+        }
+      }
+    },
+    "s2_l9": {
+      "id": "s2_l9",
+      "type": "line",
+      "shot": {
+        "cam": "low:victor",
+        "side": -1
+      }
+    },
+    "s3_open": {
+      "id": "s3_open",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 5.2,
+      "shot": {
+        "cam": "machine_top"
+      },
+      "stage": {
+        "tech1": {
+          "at": "sensor_tech",
+          "face": "prep",
+          "pose": "idle"
+        },
+        "tech2": {
+          "at": "pit_tech_b",
+          "face": "machine",
+          "pose": "idle"
+        },
+        "scientist": {
+          "pose": "idle"
+        }
+      },
+      "cue": {
+        "music": "tension",
+        "timeline": [
+          {
+            "at": 0.4,
+            "env": "subjectOn",
+            "sfx": "airlock"
+          },
+          {
+            "at": 0.6,
+            "env": "board:CHAMBER OPEN"
+          }
+        ]
+      }
+    },
+    "s3_belongings": {
+      "id": "s3_belongings",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 3.8,
+      "shot": {
+        "cam": "medium:rookie",
+        "side": -1
+      },
+      "stage": {
+        "rookie": {
+          "at": "prep",
+          "face": "cart",
+          "pose": "idle"
+        }
+      },
+      "cue": {
+        "env": [
+          "subjectOn"
+        ],
+        "timeline": [
+          {
+            "at": 1.4,
+            "env": "belongings"
+          }
+        ]
+      }
+    },
+    "s3_phone_1": {
+      "id": "s3_phone_1",
+      "type": "line",
+      "stage": {
+        "scientist": {
+          "at": "sci_brief",
+          "face": "rookie"
+        }
+      },
+      "shot": {
+        "cam": "close:scientist"
+      }
+    },
+    "s3_phone_2": {
+      "id": "s3_phone_2",
+      "type": "line",
+      "shot": {
+        "cam": "close:rookie",
+        "side": -1
+      }
+    },
+    "s3_phone_3": {
+      "id": "s3_phone_3",
+      "type": "line",
+      "shot": {
+        "cam": "close:scientist",
+        "push": true
+      }
+    },
+    "s3_sensors": {
+      "id": "s3_sensors",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 3.6,
+      "shot": {
+        "cam": "ots:rookie>tech1"
+      },
+      "stage": {
+        "rookie": {
+          "at": "prep",
+          "face": "tech1",
+          "pose": "idle"
+        },
+        "tech1": {
+          "at": "sensor_tech",
+          "face": "rookie"
+        }
+      },
+      "cue": {
+        "env": [
+          "belongings"
+        ],
+        "timeline": [
+          {
+            "at": 0.3,
+            "stage": {
+              "tech1": {
+                "play": "interact"
+              }
+            }
+          },
+          {
+            "at": 1.6,
+            "env": "beaconArm",
+            "sfx": "beep"
+          }
+        ]
+      }
+    },
+    "s3_don_glass": {
+      "id": "s3_don_glass",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 3.2,
+      "shot": {
+        "cam": "glass_from_pit"
+      },
+      "stage": {
+        "victor": {
+          "at": "don_glass",
+          "face": "window",
+          "pose": "stance"
+        },
+        "guard1": {
+          "at": "guard_l_deck"
+        },
+        "guard2": {
+          "at": "guard_r_deck"
+        }
+      }
+    },
+    "s3_rack": {
+      "id": "s3_rack",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 3,
+      "shot": {
+        "cam": "track:scientist",
+        "side": -1
+      },
+      "stage": {
+        "scientist": {
+          "at": "sci_rack",
+          "face": "return_rack",
+          "pose": "idle"
+        }
+      },
+      "cue": {
+        "timeline": [
+          {
+            "at": 0.4,
+            "stage": {
+              "scientist": {
+                "play": "interact"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "s3_l1": {
+      "id": "s3_l1",
+      "type": "line",
+      "stage": {
+        "rookie": {
+          "at": "plinth_front",
+          "face": "scientist",
+          "pose": "idle"
+        },
+        "scientist": {
+          "at": "sci_brief",
+          "face": "rookie",
+          "pose": "idle"
+        }
+      },
+      "shot": {
+        "cam": "ots:rookie>scientist",
+        "arc": 5,
+        "duration": 6
+      }
+    },
+    "s3_l2": {
+      "id": "s3_l2",
+      "type": "choice",
+      "shot": {
+        "cam": "close:scientist"
+      },
+      "choiceId": "approx",
+      "style": "dialogue",
+      "optionStaging": {
+        "approx": {
+          "icon": "eye"
+        },
+        "why_year": {
+          "icon": "hourglass"
+        },
+        "fine": {
+          "icon": "target"
+        }
+      },
+      "echoShot": {
+        "cam": "close:rookie",
+        "side": -1
+      }
+    },
+    "s3_l4": {
+      "id": "s3_l4",
+      "type": "choice",
+      "shot": {
+        "cam": "close:scientist",
+        "push": true
+      },
+      "choiceId": "getting_back",
+      "style": "dialogue",
+      "optionStaging": {
+        "back": {
+          "icon": "chat"
+        },
+        "guessing": {
+          "icon": "bolt"
+        },
+        "need": {
+          "icon": "hand"
+        }
+      },
+      "echoShot": {
+        "cam": "close:rookie",
+        "side": -1
+      }
+    },
+    "s3_l6": {
+      "id": "s3_l6",
+      "type": "choice",
+      "shot": {
+        "cam": "ots:rookie>scientist"
+      },
+      "choiceId": "should",
+      "style": "dialogue",
+      "optionStaging": {
+        "should": {
+          "icon": "eye"
+        },
+        "big_word": {
+          "icon": "bolt"
+        },
+        "find_out": {
+          "icon": "target"
+        }
+      },
+      "echoShot": {
+        "cam": "close:rookie"
+      }
+    },
+    "s3_ready": {
+      "id": "s3_ready",
+      "type": "choice",
+      "choiceId": "ready",
+      "style": "dialogue",
+      "shot": {
+        "cam": "ots:scientist>rookie"
+      },
+      "optionStaging": {
+        "start": {
+          "icon": "bolt"
+        },
+        "return": {
+          "icon": "lock"
+        },
+        "hesitate": {
+          "icon": "hand"
+        }
+      }
+    },
+    "s3_r_start": {
+      "id": "s3_r_start",
+      "type": "line",
+      "shot": {
+        "cam": "close:scientist"
+      }
+    },
+    "s3_r_return": {
+      "id": "s3_r_return",
+      "type": "line",
+      "shot": {
+        "cam": "close:scientist",
+        "push": true
+      }
+    },
+    "s3_r_hesitate": {
+      "id": "s3_r_hesitate",
+      "type": "line",
+      "gesture": "arms_crossed",
+      "shot": {
+        "cam": "close:scientist",
+        "push": true
+      }
+    },
+    "s4_walk": {
+      "id": "s4_walk",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 3,
+      "shot": {
+        "cam": "pit_over_rookie"
+      },
+      "stage": {
+        "rookie": {
+          "walk": "machine_front",
+          "face": "platform"
+        },
+        "scientist": {
+          "walk": "sci_rack",
+          "face": "return_rack"
+        }
+      }
+    },
+    "s4_inside": {
+      "id": "s4_inside",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 3.6,
+      "shot": {
+        "cam": "subject_front"
+      },
+      "stage": {
+        "rookie": {
+          "at": "platform",
+          "face": 180,
+          "pose": "idle"
+        },
+        "tech1": {
+          "at": "pit_tech_a",
+          "face": "machine",
+          "pose": "idle"
+        },
+        "tech2": {
+          "at": "pit_tech_b",
+          "face": "machine",
+          "pose": "idle"
+        }
+      },
+      "cue": {
+        "env": [
+          "subjectOn",
+          "beaconArm"
+        ],
+        "timeline": [
+          {
+            "at": 0.3,
+            "env": "cageClose",
+            "sfx": "airlock"
+          },
+          {
+            "at": 0.6,
+            "env": "board:SUBJECT IN CHAMBER"
+          }
+        ]
+      }
+    },
+    "s4_lock": {
+      "id": "s4_lock",
+      "type": "qte",
+      "mode": "hold",
+      "label": "Hold still",
+      "hint": "Press and hold while the field locks on",
+      "count": 1,
+      "window": 2200,
+      "result": "field_lock",
+      "shot": {
+        "cam": "close:rookie",
+        "push": true
+      },
+      "cue": {
+        "env": [
+          "cageClose"
+        ],
+        "timeline": [
+          {
+            "at": 0.2,
+            "env": "machineWake",
+            "sfx": "spinup"
+          }
+        ]
+      },
+      "onHit": [
+        [
+          {
+            "at": 0,
+            "env": "board:FIELD LOCKED",
+            "sfx": "beep"
+          }
+        ]
+      ]
+    },
+    "s4_l1": {
+      "id": "s4_l1",
+      "type": "line",
+      "cinematic": true,
+      "stage": {
+        "scientist": {
+          "at": "sci_console",
+          "face": "console_r",
+          "pose": "idle"
+        }
+      },
+      "cue": {
+        "env": [
+          "board:ONLINE",
+          "machineSpin"
+        ],
+        "sfx": "spinup"
+      },
+      "shot": {
+        "cam": "console_ots"
+      }
+    },
+    "s4_l2": {
+      "id": "s4_l2",
+      "type": "line",
+      "cinematic": true,
+      "cue": {
+        "env": [
+          "board:COORDINATES LOCKED"
+        ],
+        "sfx": "beep"
+      },
+      "shot": {
+        "cam": "machine_top"
+      }
+    },
+    "s4_l3": {
+      "id": "s4_l3",
+      "type": "line",
+      "cinematic": true,
+      "cue": {
+        "env": [
+          "board:ONE YEAR PRIOR"
+        ],
+        "sfx": "beep"
+      },
+      "shot": {
+        "cam": "subject_front"
+      }
+    },
+    "s4_l4": {
+      "id": "s4_l4",
+      "type": "line",
+      "cinematic": true,
+      "shot": {
+        "cam": "close:victor",
+        "push": true
+      }
+    },
+    "s4_l5": {
+      "id": "s4_l5",
+      "type": "line",
+      "cinematic": true,
+      "cue": {
+        "env": [
+          "board:T-3"
+        ],
+        "sfx": "beep"
+      },
+      "shot": {
+        "cam": "console_ots",
+        "push": true
+      }
+    },
+    "s4_l6": {
+      "id": "s4_l6",
+      "type": "line",
+      "cinematic": true,
+      "cue": {
+        "env": [
+          "board:T-2"
+        ],
+        "sfx": "beep"
+      },
+      "shot": {
+        "cam": "close:rookie",
+        "push": true
+      }
+    },
+    "s4_l7": {
+      "id": "s4_l7",
+      "type": "line",
+      "cinematic": true,
+      "cue": {
+        "env": [
+          "board:T-1"
+        ],
+        "sfx": "beep"
+      },
+      "shot": {
+        "cam": "board_view"
+      }
+    },
+    "s4_build": {
+      "id": "s4_build",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 3.6,
+      "shot": {
+        "cam": "machine_top"
+      },
+      "cue": {
+        "env": [
+          "board:TRANSFER"
+        ],
+        "timeline": [
+          {
+            "at": 0,
+            "env": "flicker"
+          },
+          {
+            "at": 0.2,
+            "sfx": "warp"
+          },
+          {
+            "at": 0.6,
+            "fx": "distort"
+          },
+          {
+            "at": 1.2,
+            "fx": "silence"
+          }
+        ]
+      }
+    },
+    "s4_transfer": {
+      "id": "s4_transfer",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 4.6,
+      "shot": {
+        "cam": "subject_front",
+        "push": true
+      },
+      "cue": {
+        "timeline": [
+          {
+            "at": 0.6,
+            "env": "surge",
+            "shake": 0.05
+          },
+          {
+            "at": 1,
+            "fx": "whiteout"
+          },
+          {
+            "at": 1.6,
+            "stage": {
+              "rookie": {
+                "show": false
+              }
+            }
+          }
+        ]
+      }
+    },
+    "s5_wake": {
+      "id": "s5_wake",
+      "type": "shot",
+      "env": "past",
+      "cinematic": true,
+      "hold": 4.6,
+      "shot": {
+        "cam": "wake_low"
+      },
+      "stage": {
+        "rookie": {
+          "at": "wake_spot",
+          "face": 0,
+          "pose": "idle",
+          "look": "wake_ground"
+        }
+      },
+      "cue": {
+        "music": "past",
+        "ambience": "street",
+        "env": [
+          "arrive"
+        ]
+      }
+    },
+    "s5_up": {
+      "id": "s5_up",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 3.4,
+      "shot": {
+        "cam": "street_wide"
+      },
+      "stage": {
+        "rookie": {
+          "face": "street_mid",
+          "look": null
+        }
+      }
+    },
+    "s5_l1": {
+      "id": "s5_l1",
+      "type": "line",
+      "stage": {
+        "rookie": {
+          "at": "wake_spot",
+          "face": "street_mid",
+          "pose": "idle"
+        }
+      },
+      "shot": {
+        "cam": "close:rookie",
+        "push": true
+      }
+    },
+    "s5_check": {
+      "id": "s5_check",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 2.8,
+      "shot": {
+        "cam": "medium:rookie",
+        "side": -1
+      },
+      "cue": {
+        "timeline": [
+          {
+            "at": 0.3,
+            "stage": {
+              "rookie": {
+                "play": "interact"
+              }
+            }
+          },
+          {
+            "at": 0.9,
+            "sfx": "denied"
+          }
+        ]
+      }
+    },
+    "s5_l2": {
+      "id": "s5_l2",
+      "type": "line",
+      "shot": {
+        "cam": "close:rookie",
+        "side": -1
+      }
+    },
+    "s5_find": {
+      "id": "s5_find",
+      "type": "explore",
+      "firstVisit": "past_first",
+      "stage": {
+        "rookie": {
+          "at": "wake_spot",
+          "face": "street_mid",
+          "pose": "idle"
+        }
+      },
+      "hotspots": [
+        {
+          "id": "newspaper",
+          "label": "Newspapers",
+          "icon": "eye",
+          "at": "kiosk",
+          "stand": "newspaper_stand",
+          "height": 1.9,
+          "ends": true,
+          "sets": {
+            "date_source": "newspaper",
+            "past_newspaper": true
+          },
+          "lines": [
+            {
+              "speaker": "rookie",
+              "text": "The Herald. Monday, the third of November..."
+            }
+          ]
+        },
+        {
+          "id": "display",
+          "label": "Info display",
+          "icon": "eye",
+          "at": "display",
+          "stand": "display_stand",
+          "height": 2.7,
+          "ends": true,
+          "sets": {
+            "date_source": "display",
+            "past_display": true
+          },
+          "lines": [
+            {
+              "speaker": "rookie",
+              "text": "Six forty-eight. Monday, the third of November..."
+            }
+          ]
+        },
+        {
+          "id": "poster",
+          "label": "Posters",
+          "icon": "eye",
+          "at": "poster",
+          "stand": "poster_stand",
+          "height": 2.5,
+          "sets": {
+            "past_poster": true
+          },
+          "lines": [
+            {
+              "speaker": "rookie",
+              "text": "The Midnight Orchestra, this Saturday. Which Saturday?"
+            },
+            {
+              "speaker": "rookie",
+              "text": "And Meridian Tower, \"opening 2026\". It opened in the spring. I was there."
+            }
+          ]
+        }
+      ]
+    },
+    "s5_paper": {
+      "id": "s5_paper",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 3.4,
+      "shot": {
+        "cam": "paper_close"
+      }
+    },
+    "s5_display": {
+      "id": "s5_display",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 3.4,
+      "shot": {
+        "cam": "display_close"
+      }
+    },
+    "s5_l3": {
+      "id": "s5_l3",
+      "type": "line",
+      "shot": {
+        "cam": "close:rookie",
+        "push": true
+      }
+    },
+    "s5_pause": {
+      "id": "s5_pause",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 2.4,
+      "shot": {
+        "cam": "street_wide"
+      }
+    },
+    "s5_l4": {
+      "id": "s5_l4",
+      "type": "line",
+      "shot": {
+        "cam": "close:rookie",
+        "side": -1,
+        "push": true
+      }
+    },
+    "s5_tower": {
+      "id": "s5_tower",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 5,
+      "shot": {
+        "cam": "tower_view"
+      }
+    },
+    "s5_look": {
+      "id": "s5_look",
+      "type": "explore",
+      "stage": {
+        "rookie": {
+          "face": "street_mid",
+          "pose": "idle"
+        }
+      },
+      "hotspots": [
+        {
+          "id": "corner",
+          "label": "Wait at the corner",
+          "icon": "target",
+          "at": "corner",
+          "stand": "corner",
+          "face": "street_mid",
+          "height": 2.3,
+          "ends": true
+        },
+        {
+          "id": "tower",
+          "label": "Meridian Tower",
+          "icon": "eye",
+          "at": "tower_look",
+          "stand": "tower_look",
+          "face": "tower",
+          "height": 2.2,
+          "sets": {
+            "past_tower": true
+          },
+          "lines": [
+            {
+              "speaker": "rookie",
+              "text": "I've stood on the roof of that building."
+            },
+            {
+              "speaker": "rookie",
+              "text": "Here they haven't even finished the frame."
+            }
+          ]
+        },
+        {
+          "id": "diner",
+          "label": "Rossi's",
+          "icon": "eye",
+          "at": "diner",
+          "stand": "diner_stand",
+          "face": "diner",
+          "height": 3.2,
+          "sets": {
+            "past_diner": true
+          },
+          "lines": [
+            {
+              "speaker": "rookie",
+              "text": "Rossi's. Still open."
+            },
+            {
+              "speaker": "rookie",
+              "text": "In my time this is a burnt-out shell. Nobody ever said who struck the match."
+            }
+          ]
+        }
+      ]
+    },
+    "s5_wait_1": {
+      "id": "s5_wait_1",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 3.4,
+      "shot": {
+        "cam": "corner_wide"
+      },
+      "stage": {
+        "rookie": {
+          "at": "corner",
+          "face": 180,
+          "pose": "idle"
+        }
+      }
+    },
+    "s5_wait_2": {
+      "id": "s5_wait_2",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 3.4,
+      "shot": {
+        "cam": "diner_view"
+      }
+    },
+    "s5_year": {
+      "id": "s5_year",
+      "type": "choice",
+      "choiceId": "year",
+      "style": "card",
+      "shot": {
+        "cam": "tower_view"
+      },
+      "optionStaging": {
+        "low": {
+          "icon": "scales"
+        },
+        "watch": {
+          "icon": "crown"
+        },
+        "match": {
+          "icon": "bolt"
+        }
+      }
+    },
+    "s5_year_low": {
+      "id": "s5_year_low",
+      "type": "line",
+      "stage": {
+        "rookie": {
+          "at": "corner",
+          "face": 180,
+          "pose": "idle"
+        }
+      },
+      "shot": {
+        "cam": "close:rookie"
+      }
+    },
+    "s5_year_watch": {
+      "id": "s5_year_watch",
+      "type": "line",
+      "stage": {
+        "rookie": {
+          "at": "corner",
+          "face": 180,
+          "pose": "idle"
+        }
+      },
+      "shot": {
+        "cam": "close:rookie"
+      }
+    },
+    "s5_year_match": {
+      "id": "s5_year_match",
+      "type": "line",
+      "stage": {
+        "rookie": {
+          "at": "corner",
+          "face": 180,
+          "pose": "idle"
+        }
+      },
+      "shot": {
+        "cam": "close:rookie"
+      }
+    },
+    "s6_signal": {
+      "id": "s6_signal",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 3,
+      "shot": {
+        "cam": "medium:rookie",
+        "side": -1
+      },
+      "stage": {
+        "rookie": {
+          "at": "corner",
+          "face": 180,
+          "pose": "idle"
+        }
+      },
+      "cue": {
+        "timeline": [
+          {
+            "at": 0.2,
+            "sfx": "beacon"
+          },
+          {
+            "at": 0.5,
+            "stage": {
+              "rookie": {
+                "play": "interact"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "s6_l1": {
+      "id": "s6_l1",
+      "type": "line",
+      "shot": {
+        "cam": "close:rookie",
+        "push": true
+      }
+    },
+    "s6_pull": {
+      "id": "s6_pull",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 4.4,
+      "shot": {
+        "cam": "corner_wide"
+      },
+      "cue": {
+        "env": [
+          "distort"
+        ],
+        "timeline": [
+          {
+            "at": 0.1,
+            "sfx": "warp"
+          },
+          {
+            "at": 0.3,
+            "fx": "distort"
+          },
+          {
+            "at": 0.4,
+            "fx": "silence"
+          },
+          {
+            "at": 2,
+            "fx": "whiteout"
+          },
+          {
+            "at": 2.6,
+            "stage": {
+              "rookie": {
+                "show": false
+              }
+            }
+          }
+        ]
+      }
+    },
+    "s7_down": {
+      "id": "s7_down",
+      "type": "shot",
+      "env": "lab",
+      "cinematic": true,
+      "hold": 4,
+      "shot": {
+        "cam": "machine_orbit"
+      },
+      "stage": {
+        "victor": {
+          "at": "don_returned",
+          "face": "platform",
+          "pose": "idle"
+        },
+        "scientist": {
+          "at": "sci_rack",
+          "face": "return_rack",
+          "pose": "idle"
+        },
+        "tech1": {
+          "at": "pit_tech_a",
+          "face": "machine",
+          "pose": "idle"
+        },
+        "tech2": {
+          "at": "pit_tech_b",
+          "face": "machine",
+          "pose": "idle"
+        },
+        "guard1": {
+          "at": "guard_l_deck",
+          "face": "deck_mid",
+          "pose": "arms_crossed"
+        },
+        "guard2": {
+          "at": "guard_r_deck",
+          "face": "deck_mid",
+          "pose": "arms_crossed"
+        }
+      },
+      "cue": {
+        "ambience": "lab",
+        "env": [
+          "chamberLit",
+          "subjectOn",
+          "cageClose",
+          "machineSpin",
+          "beaconLive",
+          "board:RECALL"
+        ],
+        "timeline": [
+          {
+            "at": 0.6,
+            "stage": {
+              "scientist": {
+                "play": "interact"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "s7_back": {
+      "id": "s7_back",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 3.8,
+      "shot": {
+        "cam": "subject_front"
+      },
+      "elapsed": 60,
+      "stage": {
+        "rookie": {
+          "at": "platform",
+          "face": 180,
+          "pose": "idle",
+          "show": false
+        }
+      },
+      "cue": {
+        "timeline": [
+          {
+            "at": 0.3,
+            "sfx": "reappear"
+          },
+          {
+            "at": 1,
+            "env": "surge",
+            "flash": true,
+            "shake": 0.04
+          },
+          {
+            "at": 1.1,
+            "stage": {
+              "rookie": {
+                "show": true
+              }
+            }
+          },
+          {
+            "at": 1.6,
+            "env": "machineDown",
+            "sfx": "spindown"
+          },
+          {
+            "at": 1.8,
+            "env": "board:SUBJECT RETURNED"
+          }
+        ]
+      }
+    },
+    "s7_rush": {
+      "id": "s7_rush",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 3.4,
+      "shot": {
+        "cam": "pit_side"
+      },
+      "elapsed": 60,
+      "stage": {
+        "rookie": {
+          "at": "rookie_returned",
+          "face": "victor",
+          "pose": "idle"
+        }
+      },
+      "cue": {
+        "env": [
+          "machineDown",
+          "cageOpen",
+          "beaconOff"
+        ],
+        "timeline": [
+          {
+            "at": 0.1,
+            "stage": {
+              "tech1": {
+                "walk": "rush_a",
+                "pace": "jog",
+                "face": "rookie"
+              },
+              "tech2": {
+                "walk": "rush_b",
+                "pace": "jog",
+                "face": "rookie"
+              }
+            }
+          },
+          {
+            "at": 0.3,
+            "stage": {
+              "scientist": {
+                "walk": "sci_returned",
+                "face": "rookie"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "s7_l1": {
+      "id": "s7_l1",
+      "type": "choice",
+      "elapsed": 60,
+      "stage": {
+        "rookie": {
+          "at": "rookie_returned",
+          "face": "victor",
+          "pose": "idle"
+        },
+        "victor": {
+          "at": "don_returned",
+          "face": "rookie",
+          "pose": "idle"
+        },
+        "scientist": {
+          "at": "sci_returned",
+          "face": "rookie",
+          "pose": "idle"
+        },
+        "tech1": {
+          "at": "rush_a",
+          "face": "rookie",
+          "pose": "idle"
+        },
+        "tech2": {
+          "at": "rush_b",
+          "face": "rookie",
+          "pose": "idle"
+        }
+      },
+      "shot": {
+        "cam": "close:victor",
+        "push": true
+      },
+      "choiceId": "welcome",
+      "style": "dialogue",
+      "optionStaging": {
+        "where": {
+          "icon": "chat"
+        },
+        "told": {
+          "icon": "bolt"
+        },
+        "worked": {
+          "icon": "atom"
+        }
+      },
+      "echoShot": {
+        "cam": "close:rookie",
+        "side": -1
+      }
+    },
+    "s7_l2_hesitate": {
+      "id": "s7_l2_hesitate",
+      "type": "line",
+      "elapsed": 60,
+      "stage": {
+        "rookie": {
+          "face": "scientist"
+        }
+      },
+      "shot": {
+        "cam": "close:scientist",
+        "push": true
+      }
+    },
+    "s7_l3": {
+      "id": "s7_l3",
+      "type": "choice",
+      "elapsed": 60,
+      "stage": {
+        "rookie": {
+          "face": "scientist"
+        }
+      },
+      "shot": {
+        "cam": "close:scientist"
+      },
+      "choiceId": "how_long",
+      "style": "dialogue",
+      "optionStaging": {
+        "year": {
+          "icon": "hourglass"
+        },
+        "give_take": {
+          "icon": "hourglass"
+        },
+        "seasons": {
+          "icon": "eye"
+        }
+      },
+      "echoShot": {
+        "cam": "close:rookie",
+        "side": -1
+      }
+    },
+    "s7_l5": {
+      "id": "s7_l5",
+      "type": "choice",
+      "elapsed": 60,
+      "shot": {
+        "cam": "close:scientist",
+        "push": true
+      },
+      "choiceId": "year_told",
+      "style": "dialogue",
+      "optionStaging": {
+        "told_all": {
+          "icon": "chat"
+        },
+        "counted": {
+          "icon": "hourglass"
+        },
+        "clocks": {
+          "icon": "bolt"
+        }
+      },
+      "echoShot": {
+        "cam": "ots:scientist>rookie"
+      }
+    },
+    "s7_clock": {
+      "id": "s7_clock",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 3.2,
+      "shot": {
+        "cam": "board_view"
+      },
+      "elapsed": 60,
+      "stage": {
+        "scientist": {
+          "face": "glass_from_pit"
+        }
+      },
+      "cue": {
+        "env": [
+          "board:ELAPSED 00:01:00"
+        ]
+      }
+    },
+    "s7_l7": {
+      "id": "s7_l7",
+      "type": "line",
+      "elapsed": 60,
+      "stage": {
+        "scientist": {
+          "face": "rookie"
+        }
+      },
+      "shot": {
+        "cam": "close:scientist",
+        "push": true
+      }
+    },
+    "s7_l8": {
+      "id": "s7_l8",
+      "type": "line",
+      "elapsed": 60,
+      "shot": {
+        "cam": "close:rookie"
+      }
+    },
+    "s7_l9": {
+      "id": "s7_l9",
+      "type": "line",
+      "elapsed": 60,
+      "shot": {
+        "cam": "close:scientist"
+      }
+    },
+    "s7_pause": {
+      "id": "s7_pause",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 2.2,
+      "elapsed": 60,
+      "shot": {
+        "cam": "close:rookie",
+        "push": true
+      }
+    },
+    "s7_l10": {
+      "id": "s7_l10",
+      "type": "line",
+      "elapsed": 60,
+      "shot": {
+        "cam": "close:rookie",
+        "side": -1
+      }
+    },
+    "s7_l11": {
+      "id": "s7_l11",
+      "type": "choice",
+      "elapsed": 60,
+      "shot": {
+        "cam": "ots:rookie>scientist"
+      },
+      "choiceId": "conclusion",
+      "style": "dialogue",
+      "optionStaging": {
+        "changes": {
+          "icon": "atom"
+        },
+        "minute": {
+          "icon": "hourglass"
+        },
+        "missed": {
+          "icon": "bolt"
+        }
+      },
+      "echoShot": {
+        "cam": "close:rookie"
+      }
+    },
+    "s7_disbelief": {
+      "id": "s7_disbelief",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 3,
+      "elapsed": 60,
+      "shot": {
+        "cam": "close:scientist",
+        "side": -1
+      },
+      "stage": {
+        "scientist": {
+          "face": "platform"
+        }
+      }
+    },
+    "s7_l14": {
+      "id": "s7_l14",
+      "type": "line",
+      "elapsed": 60,
+      "cue": {
+        "music": "resolve"
+      },
+      "stage": {
+        "victor": {
+          "face": "platform"
+        }
+      },
+      "shot": {
+        "cam": "low:victor",
+        "side": -1
+      }
+    },
+    "s7_complete": {
+      "id": "s7_complete",
+      "type": "complete",
+      "cinematic": true
+    },
+    "s3_r_guessing": {
+      "id": "s3_r_guessing",
+      "type": "choice",
+      "shot": {
+        "cam": "ots:rookie>scientist"
+      },
+      "choiceId": "should",
+      "style": "dialogue",
+      "optionStaging": {
+        "should": {
+          "icon": "eye"
+        },
+        "big_word": {
+          "icon": "bolt"
+        },
+        "find_out": {
+          "icon": "target"
+        }
+      },
+      "echoShot": {
+        "cam": "close:rookie"
+      }
+    },
+    "s3_r_need": {
+      "id": "s3_r_need",
+      "type": "choice",
+      "shot": {
+        "cam": "ots:rookie>scientist"
+      },
+      "choiceId": "should",
+      "style": "dialogue",
+      "optionStaging": {
+        "should": {
+          "icon": "eye"
+        },
+        "big_word": {
+          "icon": "bolt"
+        },
+        "find_out": {
+          "icon": "target"
+        }
+      },
+      "echoShot": {
+        "cam": "close:rookie"
+      }
+    },
+    "s2_r_tell": {
+      "id": "s2_r_tell",
+      "type": "line",
+      "shot": {
+        "cam": "close:scientist",
+        "push": true
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "c_docks_01",
+  "kit": "docks",
+  "title": "Container Seven",
+  "client": "Sal",
+  "risk": "Low",
+  "pay": 300,
+  "respect": 15,
+  "mood": "scared",
+  "pitch": "A case of cigarettes walked off container seven on Robbie's shift. He's nineteen and terrified. Get Sal's money back.",
+  "cast": {"contact": "kid", "heavy": "heavy"},
+  "names": {"contact": "Robbie", "heavy": "Callum"},
+  "hotspots": {
+    "contact": "Robbie",
+    "clue_a": {"label": "Container seven", "lines": ["The seal log on container seven. Robbie's initials, checked at ten and again at two. Nobody checks a seal twice."]},
+    "clue_b": {"label": "The water steps", "lines": ["Robbie's moped at the water steps. Carton wrappers bobbing against the pilings. He's been running boxes out this way."]}
+  }
+}

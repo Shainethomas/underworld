@@ -1,0 +1,18 @@
+{
+  "id": "c_estate_06",
+  "kit": "estate",
+  "title": "Body Work",
+  "client": "Lucas",
+  "risk": "Medium",
+  "pay": 550,
+  "respect": 20,
+  "mood": "scared",
+  "pitch": "The Calloways' driver has the keys to a dented car and Victor's fee for fixing it. He thinks he's being set up. Get both.",
+  "cast": { "contact": "kid", "heavy": "heavy2" },
+  "names": { "contact": "Danny", "heavy": "Rourke" },
+  "hotspots": {
+    "contact": "Danny",
+    "clue_a": { "label": "The fountain", "lines": ["Silver paint scraped along the fountain's rim, chest height. The car hit stone, not a person. Nobody got hurt."] },
+    "clue_b": { "label": "The silver saloon", "lines": ["Driver's seat racked all the way back. Danny's a head shorter than whoever drove it last."] }
+  }
+}

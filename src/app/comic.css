@@ -1,0 +1,1075 @@
+/* ── Comic theme (the "Graphic Novel · Classic" design) ─────────────────────
+   The whole game in one comic look: cream paper, black ink outlines with hard
+   offset shadows, yellow highlights, Bangers lettering and Comic Neue text.
+   The game screen is a comic page: header strip, the 3D scene as the main
+   panel, the speech bubble / narration / choices / skill moment below it, a
+   footer strip with Next. Loaded after styles.css, whose rules it restyles.
+   Markup: GameScreen.tsx, components/comic/ComicPage.tsx, the menus. */
+
+:root {
+  --c-paper: #f6f0e1;
+  --c-ink: #111111;
+  --c-yellow: #ffd84a;
+  --c-magenta: #c2185b;
+  --c-muted: #4a4339;
+  --c-quiet: #ebe2cc;
+  --c-up: #1d7a3e;
+  --c-down: #b3261e;
+  --c-display: 'Bangers', 'Impact', sans-serif;
+  --c-body: 'Comic Neue', 'Comic Sans MS', sans-serif;
+}
+
+.viewport {
+  background: var(--c-paper);
+}
+
+.game--comic {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-sizing: border-box;
+  padding: calc(var(--safe-top) + 10px) 12px calc(var(--safe-bottom) + 10px);
+  background: var(--c-paper);
+  color: var(--c-ink);
+  font-family: var(--c-body);
+}
+
+/* the full-screen grade was for UI over the 3D view; the page needs none */
+.game--comic::after {
+  display: none;
+}
+
+/* ── Header ── */
+.comic-head {
+  position: relative;
+  z-index: 10;
+  flex: none;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* level badge, health and stamina bars, gems */
+.comic-level {
+  flex: none;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 3px solid var(--c-ink);
+  background: var(--c-yellow);
+  box-shadow: 3px 3px 0 var(--c-ink);
+  font: 400 21px/0.9 var(--c-display);
+}
+
+.comic-level__lv {
+  font: 700 10px/1 var(--c-body);
+  text-transform: uppercase;
+}
+
+.comic-meters {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  gap: 5px;
+}
+
+.comic-meter {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.comic-meter__icon {
+  flex: none;
+}
+
+.comic-meter__icon--health {
+  color: #d6293a;
+}
+
+.comic-meter__icon--stamina {
+  color: #2a8fd6;
+}
+
+.comic-meter__track {
+  flex: 1;
+  height: 12px;
+  border-radius: 6px;
+  border: 2.5px solid var(--c-ink);
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.comic-meter__fill {
+  display: block;
+  height: 100%;
+  transition: width 0.4s ease;
+}
+
+.comic-meter__fill--health {
+  background: #d6293a;
+}
+
+.comic-meter__fill--stamina {
+  background: #2a8fd6;
+}
+
+.comic-gems {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 34px;
+  padding: 0 12px 0 10px;
+  border-radius: 17px;
+  border: 3px solid var(--c-ink);
+  background: #ffffff;
+  box-shadow: 2px 2px 0 var(--c-ink);
+  font: 400 19px var(--c-display);
+  letter-spacing: 0.04em;
+}
+
+.comic-gems__icon {
+  color: #8a3ff0;
+}
+
+.comic-round {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 50%;
+  border: 3px solid var(--c-ink);
+  background: #ffffff;
+  color: var(--c-ink);
+}
+
+/* ── The scene panel: full bleed, ink rules top and bottom ── */
+.game--comic .stage {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+  margin: 0 -12px;
+  border-top: 3px solid var(--c-ink);
+  border-bottom: 3px solid var(--c-ink);
+  background: #000000;
+  overflow: hidden;
+}
+
+/* one height whenever the text panel shows, so it is the same size with or
+   without a decision */
+.game--comic.is-split .stage {
+  flex: 0 0 auto;
+  height: 52%;
+}
+
+/* Next and Skip in the scene panel's corners on cutscenes and title cards */
+.panel-next {
+  position: absolute;
+  z-index: 12;
+  right: 12px;
+  bottom: 12px;
+}
+
+.game--comic .skip {
+  top: auto;
+  right: auto;
+  bottom: 12px;
+  left: 12px;
+  height: 44px;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 3px solid var(--c-ink);
+  background: #ffffff;
+  color: var(--c-ink);
+  box-shadow: 3px 3px 0 var(--c-ink);
+  font: 400 18px var(--c-display);
+  letter-spacing: 0.06em;
+}
+
+.panel-caption {
+  position: absolute;
+  z-index: 6;
+  top: 10px;
+  left: 12px;
+  right: 12px;
+  padding: 7px 11px;
+  background: var(--c-yellow);
+  border: 2.5px solid var(--c-ink);
+  color: var(--c-ink);
+  font: 700 13px/1.3 var(--c-body);
+  text-transform: uppercase;
+  pointer-events: none;
+  animation: comic-pop 0.28s ease both;
+}
+
+.panel-caption__label {
+  display: block;
+  font: 400 16px/1.1 var(--c-display);
+  letter-spacing: 0.06em;
+}
+
+.game--comic .elapsed,
+.game--comic.is-cinematic .elapsed {
+  top: 64px;
+}
+
+/* ── Below the panel: bubble, choices, skill moments (scrolls if needed) ── */
+/* scrolls when its content is taller than the space: drag anywhere in it */
+.below {
+  position: relative;
+  z-index: 8;
+  flex: 1 1 0;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px 8px 12px 0;
+  margin-right: -6px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--c-ink) transparent;
+}
+
+.below::-webkit-scrollbar {
+  width: 5px;
+}
+
+.below::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background: var(--c-ink);
+}
+
+.below > * {
+  flex: none;
+}
+
+.below__ask {
+  margin: 2px 0 0;
+  font: 400 19px/1.1 var(--c-display);
+  letter-spacing: 0.06em;
+}
+
+/* narration between lines: a caption box where the bubble goes */
+.narration {
+  margin: 0 2px 0 0;
+  padding: 10px 14px 12px;
+  border: 3px solid var(--c-ink);
+  background: var(--c-yellow);
+  box-shadow: 4px 4px 0 var(--c-ink);
+  font: 700 15px/1.35 var(--c-body);
+  text-transform: uppercase;
+  animation: comic-pop 0.25s ease both;
+}
+
+/* a line or narration keeps one size, whatever its length, so Next under it
+   is always in the same place */
+.below--talk > .dialogue,
+.below--talk > .narration {
+  min-height: 132px;
+  box-sizing: border-box;
+}
+
+.below__next {
+  margin-top: 6px;
+}
+
+.below__next .comic-next {
+  width: 100%;
+  height: 52px;
+  font-size: 23px;
+}
+
+/* speech bubble, its tail pointing up into the panel */
+.game--comic .dialogue {
+  margin: 0 2px 0 14px;
+  padding: 9px 15px 13px;
+  border-radius: 20px;
+  border: 3px solid var(--c-ink);
+  background: #ffffff;
+  color: var(--c-ink);
+  box-shadow: 4px 4px 0 var(--c-ink);
+  animation: comic-pop 0.25s ease both;
+}
+
+.game--comic .dialogue::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 34px;
+  width: 18px;
+  height: 18px;
+  background: #ffffff;
+  border-top: 3px solid var(--c-ink);
+  border-left: 3px solid var(--c-ink);
+  transform: rotate(45deg);
+}
+
+.game--comic .dialogue__tag {
+  position: static;
+  display: block;
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  color: var(--c-magenta);
+  font: 400 18px/1.15 var(--c-display);
+  letter-spacing: 0.04em;
+}
+
+.game--comic .dialogue__text {
+  font: 700 16.5px/1.3 var(--c-body);
+}
+
+/* the footer's Next button replaces the bubble's chevron and tap-anywhere */
+.game--comic .dialogue__next,
+.game--comic .title-card__tap {
+  display: none;
+}
+
+.game--comic .dialogue {
+  cursor: default;
+}
+
+/* choices: inked cards with number badges */
+.game--comic .choices {
+  gap: 8px;
+}
+
+.game--comic .choice {
+  min-height: 46px;
+  gap: 10px;
+  padding: 5px 12px 5px 8px;
+  border-radius: 10px;
+  border: 3px solid var(--c-ink);
+  background: #ffffff;
+  color: var(--c-ink);
+  box-shadow: 3px 3px 0 var(--c-ink);
+  font: 700 16px/1.25 var(--c-body);
+  animation: comic-pop 0.25s ease both;
+}
+
+.choice__no {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 2.5px solid var(--c-ink, #111111);
+  background: var(--c-yellow, #ffd84a);
+  color: var(--c-ink, #111111);
+  font: 400 16px/1 var(--c-display, sans-serif);
+}
+
+@media (hover: hover) {
+  .game--comic .choice:hover {
+    background: var(--c-yellow);
+    color: var(--c-ink);
+    border-color: var(--c-ink);
+  }
+}
+
+.game--comic .choice:active,
+.game--comic .choice.is-picked {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--c-ink);
+}
+
+.game--comic .choice.is-picked {
+  background: var(--c-yellow);
+  color: var(--c-ink);
+  border-color: var(--c-ink);
+}
+
+.game--comic .choice.is-picked .choice__no {
+  background: #ffffff;
+}
+
+.game--comic .choice.is-dim {
+  opacity: 0.45;
+}
+
+/* ── Skill moments: hold, timing taps, mash ── */
+.qte {
+  border-radius: 14px;
+  border: 3px solid var(--c-ink);
+  background: #ffffff;
+  color: var(--c-ink);
+  box-shadow: 4px 4px 0 var(--c-ink);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  animation: comic-pop 0.25s ease both;
+}
+
+.qte__label {
+  color: var(--c-magenta);
+  font: 400 22px/1.1 var(--c-display);
+  letter-spacing: 0.06em;
+}
+
+.qte__hint {
+  color: var(--c-muted);
+  font: 700 15px var(--c-body);
+}
+
+/* timing: a yellow target, the closing ring inked */
+.qte__target {
+  border: 3px solid var(--c-ink);
+  background: var(--c-yellow);
+  box-shadow: 3px 3px 0 var(--c-ink);
+}
+
+.qte__closing {
+  border: 3px solid var(--c-ink);
+}
+
+.qte__grade {
+  font: 400 26px var(--c-display);
+  letter-spacing: 0.08em;
+  text-shadow: 2px 2px 0 #ffffff;
+}
+
+.qte__grade--perfect {
+  color: var(--c-magenta);
+}
+
+.qte__grade--good {
+  color: var(--c-ink);
+}
+
+.qte__grade--miss {
+  color: var(--c-down);
+}
+
+.qte__pip {
+  width: 22px;
+  height: 8px;
+  border-radius: 2px;
+  border: 2px solid var(--c-ink);
+  background: #ffffff;
+}
+
+.qte__pip.is-perfect {
+  background: var(--c-yellow);
+}
+
+.qte__pip.is-good {
+  background: var(--c-quiet);
+}
+
+.qte__pip.is-miss {
+  background: var(--c-down);
+}
+
+/* mash: an inked button filling with yellow */
+.qte__mash {
+  border: 3px solid var(--c-ink);
+  background: #ffffff;
+  box-shadow: 4px 4px 0 var(--c-ink);
+}
+
+.qte__mash-fill {
+  background: var(--c-yellow);
+}
+
+.qte__mash-label {
+  color: var(--c-ink);
+  font: 400 34px var(--c-display);
+  letter-spacing: 0.08em;
+  mix-blend-mode: normal;
+}
+
+.qte__timer {
+  height: 8px;
+  border: 2px solid var(--c-ink);
+  border-radius: 4px;
+  background: #ffffff;
+}
+
+.qte__timer span {
+  background: var(--c-magenta);
+}
+
+/* hold: a white disc with an inked rim, the progress ring in magenta */
+.qte__hold {
+  border-radius: 50%;
+  border: 3px solid var(--c-ink);
+  background: #ffffff;
+  box-shadow: 4px 4px 0 var(--c-ink);
+}
+
+.qte__hold-track {
+  stroke: var(--c-quiet);
+}
+
+.qte__hold-bar {
+  stroke: var(--c-magenta);
+}
+
+.qte__hold-label {
+  color: var(--c-ink);
+  font: 400 24px var(--c-display);
+  letter-spacing: 0.1em;
+}
+
+.qte__hold.is-done {
+  background: var(--c-yellow);
+}
+
+.qte__hold.is-done .qte__hold-label {
+  color: var(--c-ink);
+}
+
+/* ── Inside the panel: exploring and title cards ── */
+.game--comic .explore-prompt {
+  bottom: 14px;
+  border-radius: 12px;
+  border: 3px solid var(--c-ink);
+  background: #ffffff;
+  color: var(--c-ink);
+  box-shadow: 3px 3px 0 var(--c-ink);
+  font: 700 15px/1.3 var(--c-body);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.game--comic .explore-prompt svg {
+  color: var(--c-magenta);
+}
+
+.game--comic .explore-prompt__hint {
+  color: var(--c-muted);
+  font: 700 11.5px var(--c-body);
+}
+
+.game--comic .title-card {
+  /* clears the Skip and Next buttons in the panel's bottom corners */
+  padding: 120px 18px 74px;
+}
+
+.game--comic .title-card__chapter {
+  color: var(--c-yellow);
+  font: 400 21px var(--c-display);
+  letter-spacing: 0.12em;
+}
+
+.game--comic .title-card__rule {
+  background: var(--c-yellow);
+}
+
+.game--comic .title-card__title {
+  margin: 8px 0 10px;
+  font: 400 clamp(40px, 12vw, 58px) / 0.95 var(--c-display);
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  text-shadow: 3px 3px 0 #000000;
+}
+
+.game--comic .title-card__sub {
+  font: 700 17px/1.3 var(--c-body);
+}
+
+.game--comic .title-card__ornament {
+  display: none;
+}
+
+.game--comic .title-card__tap {
+  margin-top: 16px;
+  color: #ffffff;
+  font: 400 18px var(--c-display);
+  letter-spacing: 0.08em;
+}
+
+/* ── Comic buttons (Next) ── */
+.comic-btn {
+  height: 44px;
+  padding: 0 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border-radius: 10px;
+  border: 3px solid var(--c-ink);
+  background: var(--c-yellow);
+  color: var(--c-ink);
+  box-shadow: 3px 3px 0 var(--c-ink);
+  font: 400 20px var(--c-display);
+  letter-spacing: 0.06em;
+}
+
+.comic-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--c-ink);
+}
+
+/* Next waits, dimmed, while the line is still typing */
+.comic-next:disabled {
+  background: var(--c-quiet);
+  color: var(--c-muted);
+  box-shadow: none;
+  transform: translate(2px, 2px);
+}
+
+/* ── Story log sheet ── */
+.game--comic .sheet--log {
+  max-height: 78%;
+  grid-template-rows: auto minmax(0, 1fr);
+  border-top: 3px solid var(--c-ink);
+  background: var(--c-paper);
+  color: var(--c-ink);
+}
+
+.game--comic .sheet--log h2 {
+  font: 400 24px var(--c-display);
+  letter-spacing: 0.06em;
+}
+
+.log {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  margin: 0;
+  padding: 2px 4px 6px 0;
+  list-style: none;
+  overflow-y: auto;
+}
+
+.log__line,
+.log__pick,
+.log__caption {
+  padding: 8px 12px;
+  border: 2.5px solid #111111;
+  border-radius: 14px;
+  background: #ffffff;
+  font: 700 15px/1.3 'Comic Neue', sans-serif;
+}
+
+.log__caption {
+  border-radius: 0;
+  background: #ffd84a;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.log__pick {
+  border-style: dashed;
+  background: #ebe2cc;
+}
+
+.log__who {
+  display: block;
+  color: #c2185b;
+  font: 400 15px/1.2 'Bangers', sans-serif;
+  letter-spacing: 0.04em;
+}
+
+.log__empty {
+  color: #4a4339;
+  font: 700 15px 'Comic Neue', sans-serif;
+}
+
+/* ── Buttons ── */
+.btn {
+  min-height: 52px;
+  border-radius: 12px;
+  border: 3px solid var(--c-ink);
+  background: #ffffff;
+  color: var(--c-ink);
+  box-shadow: 4px 4px 0 var(--c-ink);
+  font: 400 22px var(--c-display);
+  letter-spacing: 0.06em;
+}
+
+.btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--c-ink);
+}
+
+.btn--gold {
+  background: var(--c-yellow);
+  color: var(--c-ink);
+  box-shadow: 4px 4px 0 var(--c-ink);
+}
+
+.btn--gold:hover {
+  filter: none;
+  background: #ffe27a;
+}
+
+.btn--ghost {
+  background: #ffffff;
+}
+
+.btn--text {
+  min-height: 44px;
+  border: none;
+  background: none;
+  box-shadow: none;
+  color: var(--c-ink);
+  font: 700 16px var(--c-body);
+  letter-spacing: 0;
+}
+
+.btn--text:active {
+  box-shadow: none;
+}
+
+.icon-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 3px solid var(--c-ink);
+  background: #ffffff;
+  color: var(--c-ink);
+}
+
+/* ── Main menu: a comic cover ── */
+.menu {
+  background: var(--c-paper);
+  color: var(--c-ink);
+}
+
+.menu__rain,
+.menu__glow {
+  display: none;
+}
+
+.menu__crest {
+  background: var(--c-ink);
+}
+
+.menu__logo {
+  display: inline-block;
+  padding: 8px 18px 2px;
+  border: 4px solid var(--c-ink);
+  background: var(--c-yellow);
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  color: var(--c-ink);
+  box-shadow: 6px 6px 0 var(--c-ink);
+  transform: skewX(-8deg) rotate(-2deg);
+  font: 400 clamp(46px, 14vw, 66px) / 1 var(--c-display);
+  letter-spacing: 0.05em;
+}
+
+.menu__tag {
+  margin-top: 14px;
+  color: var(--c-ink);
+  font: 700 19px var(--c-body);
+}
+
+.menu__tag span {
+  margin-bottom: 2px;
+  color: var(--c-magenta);
+  font: 400 22px var(--c-display);
+  letter-spacing: 0.14em;
+}
+
+.menu__scenes {
+  gap: 10px;
+}
+
+.menu__scene {
+  min-height: 44px;
+  padding: 0 14px;
+  border-radius: 22px;
+  border: 3px solid var(--c-ink);
+  background: #ffffff;
+  color: var(--c-ink);
+  box-shadow: 3px 3px 0 var(--c-ink);
+  font: 400 18px var(--c-display);
+  letter-spacing: 0.05em;
+}
+
+.menu__scene:disabled {
+  background: var(--c-quiet);
+  color: var(--c-muted);
+  opacity: 1;
+}
+
+.menu__foot {
+  color: var(--c-muted);
+  font: 700 12px var(--c-body);
+}
+
+/* ── Sheets: settings, pause, story log, notices ── */
+.sheet-backdrop {
+  background: rgba(17, 17, 17, 0.5);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.sheet {
+  border-top: 3px solid var(--c-ink);
+  background: var(--c-paper);
+  color: var(--c-ink);
+}
+
+.sheet--center {
+  border: 3px solid var(--c-ink);
+  box-shadow: 6px 6px 0 var(--c-ink);
+}
+
+.sheet h2 {
+  font: 400 26px var(--c-display);
+  letter-spacing: 0.06em;
+}
+
+.sheet__lock {
+  color: var(--c-magenta);
+}
+
+.sheet__note,
+.sheet__info {
+  color: var(--c-muted);
+  font-family: var(--c-body);
+  font-weight: 700;
+}
+
+.row {
+  border-bottom: 2px solid rgba(17, 17, 17, 0.12);
+  font: 700 17px var(--c-body);
+}
+
+.row input[type='range'] {
+  accent-color: var(--c-magenta);
+}
+
+.toggle {
+  box-sizing: border-box;
+  width: 56px;
+  height: 32px;
+  border-radius: 16px;
+  border: 3px solid var(--c-ink);
+  background: #ffffff;
+}
+
+.toggle span {
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: var(--c-ink);
+}
+
+.toggle.is-on {
+  background: var(--c-yellow);
+}
+
+.toggle.is-on span {
+  transform: translateX(24px);
+}
+
+.seg {
+  padding: 3px;
+  border-radius: 12px;
+  border: 3px solid var(--c-ink);
+  background: #ffffff;
+}
+
+.seg button {
+  min-height: 38px;
+  color: var(--c-ink);
+  font: 400 17px var(--c-display);
+  letter-spacing: 0.05em;
+}
+
+.seg button.is-on {
+  background: var(--c-yellow);
+  color: var(--c-ink);
+}
+
+.sheet__wide {
+  grid-column: 1 / -1;
+}
+
+/* ── Scene complete ── */
+.complete {
+  background: rgba(246, 240, 225, 0.96);
+}
+
+.complete__panel {
+  padding: 18px 16px 12px;
+  border-radius: 16px;
+  border: 3px solid var(--c-ink);
+  background: #ffffff;
+  box-shadow: 6px 6px 0 var(--c-ink);
+  color: var(--c-ink);
+}
+
+.complete__kicker {
+  color: var(--c-magenta);
+  font: 400 21px var(--c-display);
+  letter-spacing: 0.12em;
+}
+
+.complete__rule {
+  background: var(--c-magenta);
+}
+
+.complete__title {
+  font: 400 clamp(38px, 11vw, 52px) / 1 var(--c-display);
+  letter-spacing: 0.03em;
+}
+
+.complete__ornament {
+  display: none;
+}
+
+.stat {
+  border-radius: 10px;
+  border: 2.5px solid var(--c-ink);
+  background: #ffffff;
+  box-shadow: 2px 2px 0 var(--c-ink);
+}
+
+.stat__icon {
+  color: var(--c-magenta);
+}
+
+.stat__label {
+  color: var(--c-ink);
+  font: 700 16px var(--c-body);
+}
+
+.stat__delta {
+  color: var(--c-muted);
+  font: 400 22px var(--c-display);
+}
+
+.stat__delta.is-up {
+  color: var(--c-up);
+}
+
+.stat__delta.is-down {
+  color: var(--c-down);
+}
+
+.complete__next {
+  color: var(--c-muted);
+  font: 700 12px var(--c-body);
+}
+
+.complete__next b {
+  color: var(--c-ink);
+  font: 400 26px / 1.1 var(--c-display);
+  letter-spacing: 0.04em;
+}
+
+/* ── Toasts and loading ── */
+.toast {
+  border-radius: 10px;
+  border: 3px solid var(--c-ink);
+  background: #ffffff;
+  color: var(--c-ink);
+  box-shadow: 3px 3px 0 var(--c-ink);
+  font: 400 18px var(--c-display);
+  letter-spacing: 0.05em;
+}
+
+.toast--gold {
+  border-color: var(--c-ink);
+  background: var(--c-yellow);
+  color: var(--c-ink);
+  box-shadow: 3px 3px 0 var(--c-ink);
+}
+
+.loading__crest {
+  border: 3px solid rgba(255, 216, 74, 0.25);
+  border-top-color: var(--c-yellow);
+}
+
+.loading__label {
+  color: var(--c-paper);
+  font: 400 19px var(--c-display);
+  letter-spacing: 0.1em;
+}
+
+.loading__bar {
+  height: 6px;
+  border: 2px solid var(--c-paper);
+  border-radius: 3px;
+  background: transparent;
+}
+
+.loading__bar span {
+  background: var(--c-yellow);
+}
+
+@keyframes comic-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ── Scene tag: a small label on the panel (TRAINING MATCH during the fight) ── */
+.scene-tag {
+  position: absolute;
+  z-index: 6;
+  top: 12px;
+  left: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 4px 10px 3px;
+  background: var(--c-yellow);
+  border: 2.5px solid var(--c-ink);
+  box-shadow: 3px 3px 0 var(--c-ink);
+  color: var(--c-ink);
+  font: 400 16px/1 var(--c-display);
+  letter-spacing: 0.08em;
+  pointer-events: none;
+  animation: comic-pop 0.28s ease both;
+}
+
+.scene-tag__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--c-down);
+  border: 1.5px solid var(--c-ink);
+}
+
+/* ── Title card: the scene number between the chapter and the title ── */
+.game--comic .title-card__scene {
+  margin: 14px 0 0;
+  color: #ffffff;
+  font: 400 20px/1 var(--c-display);
+  letter-spacing: 0.14em;
+}
+
+/* ── An unspoken thought: a cloud-soft bubble in italics ── */
+.game--comic .dialogue--thought {
+  border-style: dashed;
+  border-radius: 26px;
+}
+
+.game--comic .dialogue--thought::before {
+  border-style: dashed;
+}
+
+.game--comic .dialogue--thought .dialogue__text {
+  font-style: italic;
+}
+
+.game--comic .dialogue__aside {
+  color: var(--c-muted);
+  font: 700 13px/1 var(--c-body);
+  letter-spacing: 0;
+  text-transform: lowercase;
+}

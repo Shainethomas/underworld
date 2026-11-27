@@ -1,0 +1,28 @@
+node_modules
+dist
+playthrough
+resume-test
+*.tsbuildinfo
+.DS_Store
+.vercel
+
+# Source art stays local: the raw Mixamo rigs and clips can't be redistributed
+# as files, and the folder is ~700 MB. The built, compressed GLBs the game loads
+# are in public/assets/models. See README.md, "Asset pipeline".
+art-source/
+# Screenshots from test runs and reviews
+artifacts/
+# Native build output
+android/app/build
+android/build
+android/.gradle
+android/local.properties
+ios/App/Pods
+ios/App/build
+# Copies of dist made by `cap sync`, rebuilt on every mobile build
+android/app/src/main/assets/public
+ios/App/App/public
+# The local voice generator's own install and model cache (~500 MB)
+tools/kokoro/node_modules
+tools/kokoro/.cache
+*.log

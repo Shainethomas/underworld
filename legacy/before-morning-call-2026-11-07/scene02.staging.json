@@ -1,0 +1,2632 @@
+{
+  "scene": {
+    "id": "s02",
+    "index": 2,
+    "chapter": {
+      "number": 1,
+      "title": "The First Experiment"
+    },
+    "title": "The Other Empire",
+    "environments": [
+      "room",
+      "city",
+      "facility",
+      "lab"
+    ],
+    "cast": [
+      "rookie",
+      "ravi",
+      "don",
+      "scientist",
+      "sentry",
+      "guard1",
+      "guard2",
+      "tech1",
+      "tech2",
+      "tech3"
+    ],
+    "summary": [
+      "don_loyalty",
+      "independence",
+      "discipline",
+      "scientist_trust",
+      "timeline_knowledge",
+      "don_ambition_knowledge"
+    ],
+    "next": {
+      "id": "s03",
+      "title": "The First Experiment"
+    }
+  },
+  "beats": {
+    "s1_title": {
+      "id": "s1_title",
+      "type": "title",
+      "env": "room",
+      "cinematic": true,
+      "chapter": "Chapter 1",
+      "title": "The First Experiment",
+      "subtitle": "Scene 2 — The Other Empire",
+      "shot": {
+        "cam": "window_rain"
+      },
+      "cue": {
+        "music": "theme",
+        "ambience": "room",
+        "env": [
+          "lampOff",
+          "doorClose",
+          "gearDown",
+          "bagFloor"
+        ]
+      }
+    },
+    "s1_enter": {
+      "id": "s1_enter",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 4.6,
+      "shot": {
+        "cam": "room_wide"
+      },
+      "stage": {
+        "rookie": {
+          "at": "room_mid",
+          "face": "photo",
+          "pose": "idle",
+          "outfit": {
+            "hoodie": true,
+            "tank": false,
+            "wraps": false,
+            "jacket": false
+          }
+        }
+      },
+      "cue": {
+        "env": [
+          "lampOn",
+          "doorClose"
+        ]
+      }
+    },
+    "s1_unwind": {
+      "id": "s1_unwind",
+      "type": "choice",
+      "choiceId": "unwind",
+      "style": "card",
+      "shot": {
+        "cam": "room_wide"
+      },
+      "stage": {
+        "rookie": {
+          "at": "room_mid",
+          "face": "photo",
+          "pose": "idle"
+        }
+      },
+      "cue": {
+        "env": [
+          "lampOn",
+          "doorClose"
+        ]
+      },
+      "optionStaging": {
+        "photo": {
+          "icon": "eye"
+        },
+        "mirror": {
+          "icon": "brain"
+        },
+        "sleep": {
+          "icon": "scales"
+        }
+      }
+    },
+    "s1_photo": {
+      "id": "s1_photo",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 2.6,
+      "shot": {
+        "cam": "room_wide"
+      },
+      "stage": {
+        "rookie": {
+          "walk": "bedside",
+          "face": "photo"
+        }
+      }
+    },
+    "s1_photo_l1": {
+      "id": "s1_photo_l1",
+      "type": "line",
+      "stage": {
+        "rookie": {
+          "at": "bedside",
+          "face": "photo"
+        }
+      },
+      "shot": {
+        "cam": "photo_close",
+        "push": true
+      }
+    },
+    "s1_photo_l2": {
+      "id": "s1_photo_l2",
+      "type": "line",
+      "shot": {
+        "cam": "close:rookie",
+        "side": -1,
+        "push": true
+      }
+    },
+    "s1_mirror": {
+      "id": "s1_mirror",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 2.8,
+      "shot": {
+        "cam": "room_wide"
+      },
+      "stage": {
+        "rookie": {
+          "walk": "mirror_stand",
+          "face": "mirror"
+        }
+      }
+    },
+    "s1_mirror_l1": {
+      "id": "s1_mirror_l1",
+      "type": "line",
+      "gesture": "arms_crossed",
+      "stage": {
+        "rookie": {
+          "at": "mirror_stand",
+          "face": "mirror"
+        }
+      },
+      "shot": {
+        "cam": "close:rookie",
+        "push": true
+      }
+    },
+    "s1_bed": {
+      "id": "s1_bed",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 3.4,
+      "shot": {
+        "cam": "room_wide"
+      },
+      "stage": {
+        "rookie": {
+          "walk": "stand_by_bed",
+          "face": "nightstand"
+        }
+      },
+      "cue": {
+        "timeline": [
+          {
+            "at": 2.4,
+            "env": "lampOff",
+            "sfx": "lamp_click"
+          }
+        ]
+      }
+    },
+    "s1_sleep": {
+      "id": "s1_sleep",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 4.2,
+      "shot": {
+        "cam": "bed_side"
+      },
+      "stage": {
+        "rookie": {
+          "at": "bed_sit",
+          "face": 45,
+          "pose": "sit"
+        }
+      },
+      "cue": {
+        "env": [
+          "lampOff"
+        ],
+        "music": null
+      }
+    },
+    "s1_ring": {
+      "id": "s1_ring",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 2.8,
+      "shot": {
+        "cam": "phone_close"
+      },
+      "cue": {
+        "env": [
+          "phoneRing"
+        ],
+        "timeline": [
+          {
+            "at": 0.2,
+            "sfx": "phone_buzz"
+          }
+        ]
+      }
+    },
+    "s1_wake": {
+      "id": "s1_wake",
+      "type": "choice",
+      "choiceId": "wake",
+      "style": "card",
+      "shot": {
+        "cam": "bed_side"
+      },
+      "cue": {
+        "env": [
+          "phoneRing"
+        ],
+        "timeline": [
+          {
+            "at": 0.4,
+            "sfx": "phone_buzz"
+          }
+        ]
+      },
+      "optionStaging": {
+        "answer": {
+          "icon": "chat"
+        },
+        "check": {
+          "icon": "eye"
+        },
+        "ignore": {
+          "icon": "dots"
+        }
+      }
+    },
+    "s1_check": {
+      "id": "s1_check",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 2.6,
+      "shot": {
+        "cam": "phone_close"
+      },
+      "cue": {
+        "sfx": "phone_buzz"
+      }
+    },
+    "s1_ignore": {
+      "id": "s1_ignore",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 3.4,
+      "shot": {
+        "cam": "bed_side"
+      },
+      "cue": {
+        "timeline": [
+          {
+            "at": 1.6,
+            "sfx": "phone_buzz"
+          }
+        ]
+      }
+    },
+    "s1_up": {
+      "id": "s1_up",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 1.5,
+      "shot": {
+        "cam": "room_wide"
+      },
+      "stage": {
+        "rookie": {
+          "walk": "stand_by_bed",
+          "y": 0,
+          "face": "room_mid"
+        }
+      },
+      "cue": {
+        "timeline": [
+          {
+            "at": 1.2,
+            "env": "phoneAnswer",
+            "sfx": "lamp_click"
+          },
+          {
+            "at": 1.2,
+            "env": "lampOn"
+          }
+        ]
+      }
+    },
+    "s1_call_ignored": {
+      "id": "s1_call_ignored",
+      "type": "line",
+      "stage": {
+        "rookie": {
+          "at": "stand_by_bed",
+          "y": 0,
+          "face": "room_mid",
+          "pose": "phone"
+        }
+      },
+      "cue": {
+        "env": [
+          "phoneAnswer",
+          "lampOn"
+        ]
+      },
+      "shot": {
+        "cam": "medium:rookie",
+        "side": -1,
+        "push": true
+      }
+    },
+    "s1_call_awake": {
+      "id": "s1_call_awake",
+      "type": "line",
+      "stage": {
+        "rookie": {
+          "at": "stand_by_bed",
+          "y": 0,
+          "face": "room_mid",
+          "pose": "phone"
+        }
+      },
+      "cue": {
+        "env": [
+          "phoneAnswer",
+          "lampOn"
+        ]
+      },
+      "shot": {
+        "cam": "medium:rookie",
+        "side": -1,
+        "push": true
+      }
+    },
+    "s1_call_1": {
+      "id": "s1_call_1",
+      "type": "line",
+      "shot": {
+        "cam": "close:rookie",
+        "side": -1,
+        "push": true
+      }
+    },
+    "s1_call_2": {
+      "id": "s1_call_2",
+      "type": "line",
+      "shot": {
+        "cam": "close:rookie",
+        "side": -1,
+        "push": true
+      }
+    },
+    "s1_call_3": {
+      "id": "s1_call_3",
+      "type": "line",
+      "shot": {
+        "cam": "medium:rookie"
+      }
+    },
+    "s1_call": {
+      "id": "s1_call",
+      "type": "choice",
+      "choiceId": "call",
+      "style": "dialogue",
+      "shot": {
+        "cam": "close:rookie",
+        "side": -1
+      },
+      "optionStaging": {
+        "onway": {
+          "icon": "crown"
+        },
+        "what": {
+          "icon": "eye"
+        },
+        "hour": {
+          "icon": "bolt"
+        }
+      }
+    },
+    "s1_call_onway": {
+      "id": "s1_call_onway",
+      "type": "line",
+      "shot": {
+        "cam": "medium:rookie"
+      }
+    },
+    "s1_call_what": {
+      "id": "s1_call_what",
+      "type": "line",
+      "shot": {
+        "cam": "medium:rookie"
+      }
+    },
+    "s1_call_hour": {
+      "id": "s1_call_hour",
+      "type": "line",
+      "shot": {
+        "cam": "medium:rookie"
+      }
+    },
+    "s1_hangup": {
+      "id": "s1_hangup",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 2,
+      "shot": {
+        "cam": "close:rookie",
+        "side": -1
+      },
+      "cue": {
+        "timeline": [
+          {
+            "at": 0.1,
+            "sfx": "phone_hangup"
+          },
+          {
+            "at": 0.5,
+            "stage": {
+              "rookie": {
+                "pose": "idle"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "s1_dress": {
+      "id": "s1_dress",
+      "type": "choice",
+      "choiceId": "dress",
+      "style": "card",
+      "stage": {
+        "rookie": {
+          "at": "stand_by_bed",
+          "y": 0,
+          "face": "wardrobe",
+          "pose": "idle"
+        }
+      },
+      "shot": {
+        "cam": "medium:rookie",
+        "side": -1
+      },
+      "cue": {
+        "env": [
+          "roomLight"
+        ],
+        "sfx": "lamp_click"
+      },
+      "optionStaging": {
+        "jacket": {
+          "icon": "crown"
+        },
+        "hoodie": {
+          "icon": "bolt"
+        }
+      }
+    },
+    "s1_dressed": {
+      "id": "s1_dressed",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 2.6,
+      "shot": {
+        "cam": "medium:rookie"
+      },
+      "stage": {
+        "rookie": {
+          "at": "wardrobe_stand",
+          "face": "room_mid",
+          "pose": "idle",
+          "outfit": {
+            "hoodie": false,
+            "jacket": true
+          }
+        }
+      }
+    },
+    "s1_knock": {
+      "id": "s1_knock",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 3,
+      "shot": {
+        "cam": "room_door"
+      },
+      "stage": {
+        "rookie": {
+          "walk": "rookie_talk",
+          "face": "ravi_door"
+        },
+        "ravi": {
+          "at": "ravi_door",
+          "face": "rookie_talk",
+          "pose": "idle"
+        }
+      },
+      "cue": {
+        "timeline": [
+          {
+            "at": 0.2,
+            "sfx": "knock"
+          },
+          {
+            "at": 1.4,
+            "env": "doorOpen",
+            "sfx": "door_open"
+          },
+          {
+            "at": 2,
+            "stage": {
+              "ravi": {
+                "walk": "ravi_in",
+                "face": "rookie"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "s1_l4": {
+      "id": "s1_l4",
+      "type": "line",
+      "stage": {
+        "ravi": {
+          "at": "ravi_in",
+          "face": "rookie",
+          "pose": "idle"
+        },
+        "rookie": {
+          "at": "rookie_talk",
+          "face": "ravi",
+          "pose": "idle"
+        }
+      },
+      "cue": {
+        "env": [
+          "doorOpen",
+          "roomLight"
+        ]
+      },
+      "shot": {
+        "cam": "ots:rookie>ravi",
+        "push": true
+      }
+    },
+    "s1_l5": {
+      "id": "s1_l5",
+      "type": "line",
+      "shot": {
+        "cam": "close:rookie",
+        "side": -1,
+        "push": true
+      }
+    },
+    "s1_l5_loyal": {
+      "id": "s1_l5_loyal",
+      "type": "line",
+      "shot": {
+        "cam": "close:ravi"
+      }
+    },
+    "s1_l5_free": {
+      "id": "s1_l5_free",
+      "type": "line",
+      "gesture": "arms_crossed",
+      "shot": {
+        "cam": "close:ravi"
+      }
+    },
+    "s1_l5_jacket": {
+      "id": "s1_l5_jacket",
+      "type": "line",
+      "shot": {
+        "cam": "close:ravi",
+        "side": -1
+      }
+    },
+    "s1_l6": {
+      "id": "s1_l6",
+      "type": "line",
+      "shot": {
+        "cam": "close:ravi",
+        "push": true
+      }
+    },
+    "s1_choice": {
+      "id": "s1_choice",
+      "type": "choice",
+      "choiceId": "farewell",
+      "style": "dialogue",
+      "shot": {
+        "cam": "close:rookie",
+        "side": -1
+      },
+      "optionStaging": {
+        "trouble": {
+          "icon": "bolt"
+        },
+        "job": {
+          "icon": "crown"
+        },
+        "cover": {
+          "icon": "hand"
+        }
+      }
+    },
+    "s1_r_trouble": {
+      "id": "s1_r_trouble",
+      "type": "line",
+      "gesture": "arms_crossed",
+      "shot": {
+        "cam": "close:ravi",
+        "push": true
+      }
+    },
+    "s1_r_job": {
+      "id": "s1_r_job",
+      "type": "line",
+      "shot": {
+        "cam": "close:ravi",
+        "push": true
+      }
+    },
+    "s1_r_cover": {
+      "id": "s1_r_cover",
+      "type": "line",
+      "shot": {
+        "cam": "close:ravi",
+        "push": true
+      }
+    },
+    "s1_leave": {
+      "id": "s1_leave",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 3.2,
+      "shot": {
+        "cam": "room_door"
+      },
+      "stage": {
+        "ravi": {
+          "walk": "ravi_aside",
+          "face": "rookie"
+        }
+      },
+      "cue": {
+        "timeline": [
+          {
+            "at": 0.5,
+            "stage": {
+              "rookie": {
+                "walk": [
+                  "inside",
+                  "door_in"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    "s1_city": {
+      "id": "s1_city",
+      "type": "shot",
+      "env": "city",
+      "cinematic": true,
+      "hold": 5.6,
+      "shot": {
+        "cam": "drive_aerial"
+      },
+      "cue": {
+        "music": "drive",
+        "ambience": "car"
+      }
+    },
+    "s1_drive": {
+      "id": "s1_drive",
+      "type": "choice",
+      "choiceId": "drive",
+      "style": "card",
+      "shot": {
+        "cam": "drive_aerial"
+      },
+      "optionStaging": {
+        "ask": {
+          "icon": "chat"
+        },
+        "doors": {
+          "icon": "lock"
+        },
+        "trust": {
+          "icon": "crown"
+        }
+      }
+    },
+    "s1_drive_ask": {
+      "id": "s1_drive_ask",
+      "type": "line",
+      "shot": {
+        "cam": "drive_aerial"
+      }
+    },
+    "s1_drive_doors": {
+      "id": "s1_drive_doors",
+      "type": "caption",
+      "shot": {
+        "cam": "drive_aerial"
+      }
+    },
+    "s1_drive_trust": {
+      "id": "s1_drive_trust",
+      "type": "caption",
+      "shot": {
+        "cam": "drive_aerial"
+      }
+    },
+    "s1_city_portal": {
+      "id": "s1_city_portal",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 4.6,
+      "shot": {
+        "cam": "portal_approach"
+      },
+      "cue": {
+        "env": [
+          "portal"
+        ]
+      }
+    },
+    "s2_bay": {
+      "id": "s2_bay",
+      "type": "shot",
+      "env": "facility",
+      "cinematic": true,
+      "hold": 4.6,
+      "shot": {
+        "cam": "bay_wide"
+      },
+      "stage": {
+        "sentry": {
+          "at": "sentry_door",
+          "face": "car_door",
+          "pose": "arms_crossed"
+        }
+      },
+      "cue": {
+        "music": null,
+        "ambience": "bunker",
+        "env": [
+          "carParked",
+          "barrierUp"
+        ]
+      }
+    },
+    "s2_out": {
+      "id": "s2_out",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 2.4,
+      "shot": {
+        "cam": "medium:rookie",
+        "side": 1
+      },
+      "stage": {
+        "rookie": {
+          "at": "car_door",
+          "face": "scanner_stand",
+          "pose": "idle"
+        },
+        "sentry": {
+          "at": "sentry_door",
+          "face": "car_door",
+          "pose": "idle"
+        }
+      },
+      "cue": {
+        "env": [
+          "carParked"
+        ],
+        "timeline": [
+          {
+            "at": 0.1,
+            "sfx": "door_close"
+          },
+          {
+            "at": 0.6,
+            "stage": {
+              "sentry": {
+                "walk": "frisk",
+                "face": "rookie"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "s2_frisk": {
+      "id": "s2_frisk",
+      "type": "line",
+      "stage": {
+        "rookie": {
+          "at": "car_door",
+          "face": "sentry",
+          "pose": "idle"
+        },
+        "sentry": {
+          "at": "frisk",
+          "face": "rookie",
+          "pose": "idle"
+        }
+      },
+      "shot": {
+        "cam": "ots:rookie>sentry",
+        "arc": 6,
+        "duration": 6
+      }
+    },
+    "s2_phone": {
+      "id": "s2_phone",
+      "type": "choice",
+      "choiceId": "phone",
+      "style": "dialogue",
+      "shot": {
+        "cam": "close:rookie",
+        "side": -1
+      },
+      "optionStaging": {
+        "hand": {
+          "icon": "hand"
+        },
+        "push": {
+          "icon": "bolt"
+        },
+        "hide": {
+          "icon": "eye",
+          "say": "Keys. That's all I carry."
+        }
+      }
+    },
+    "s2_phone_hand": {
+      "id": "s2_phone_hand",
+      "type": "line",
+      "shot": {
+        "cam": "ots:rookie>sentry",
+        "side": -1,
+        "push": true
+      }
+    },
+    "s2_phone_push": {
+      "id": "s2_phone_push",
+      "type": "line",
+      "shot": {
+        "cam": "ots:rookie>sentry",
+        "side": -1,
+        "push": true
+      }
+    },
+    "s2_phone_push2": {
+      "id": "s2_phone_push2",
+      "type": "caption",
+      "shot": {
+        "cam": "ots:sentry>rookie"
+      }
+    },
+    "s2_phone_hide": {
+      "id": "s2_phone_hide",
+      "type": "line",
+      "shot": {
+        "cam": "ots:rookie>sentry",
+        "side": -1,
+        "push": true
+      }
+    },
+    "s2_nerve": {
+      "id": "s2_nerve",
+      "type": "qte",
+      "mode": "timing",
+      "label": "Keep your nerve",
+      "hint": "Breathe out as the ring closes",
+      "count": 3,
+      "window": 1300,
+      "result": "nerve",
+      "shot": {
+        "cam": "close:rookie",
+        "side": -1,
+        "push": true
+      },
+      "onHit": [
+        [
+          {
+            "at": 0,
+            "stage": {
+              "sentry": {
+                "play": "interact"
+              }
+            }
+          }
+        ]
+      ],
+      "onMiss": [
+        [
+          {
+            "at": 0,
+            "sfx": "denied"
+          }
+        ]
+      ]
+    },
+    "s2_nerve_ok": {
+      "id": "s2_nerve_ok",
+      "type": "line",
+      "shot": {
+        "cam": "ots:rookie>sentry"
+      }
+    },
+    "s2_nerve_bad": {
+      "id": "s2_nerve_bad",
+      "type": "line",
+      "gesture": "arms_crossed",
+      "shot": {
+        "cam": "ots:rookie>sentry",
+        "side": -1,
+        "push": true
+      }
+    },
+    "s2_nerve_bad2": {
+      "id": "s2_nerve_bad2",
+      "type": "line",
+      "shot": {
+        "cam": "close:rookie"
+      }
+    },
+    "s2_walk": {
+      "id": "s2_walk",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 5,
+      "shot": {
+        "cam": "track:rookie",
+        "side": -1
+      },
+      "stage": {
+        "rookie": {
+          "walk": "scanner_stand",
+          "face": "scanner"
+        }
+      },
+      "cue": {
+        "timeline": [
+          {
+            "at": 0.8,
+            "stage": {
+              "sentry": {
+                "walk": "sentry_door",
+                "face": "scanner_stand",
+                "pose": "arms_crossed"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "s2_palm": {
+      "id": "s2_palm",
+      "type": "qte",
+      "mode": "hold",
+      "label": "Palm scan",
+      "hint": "Press and hold",
+      "count": 1,
+      "window": 1600,
+      "result": "palm",
+      "shot": {
+        "cam": "scanner_close"
+      },
+      "stage": {
+        "rookie": {
+          "at": "scanner_stand",
+          "face": "scanner",
+          "pose": "palm"
+        },
+        "sentry": {
+          "at": "sentry_door",
+          "face": "scanner_stand",
+          "pose": "arms_crossed"
+        }
+      },
+      "cue": {
+        "timeline": [
+          {
+            "at": 0.1,
+            "sfx": "scan"
+          }
+        ]
+      },
+      "onHit": [
+        [
+          {
+            "at": 0,
+            "env": "palmOk",
+            "sfx": "access"
+          }
+        ]
+      ]
+    },
+    "s2_blast": {
+      "id": "s2_blast",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 5,
+      "shot": {
+        "cam": "door_open"
+      },
+      "stage": {
+        "rookie": {
+          "at": "scanner_stand",
+          "face": "scanner",
+          "pose": "idle"
+        }
+      },
+      "cue": {
+        "env": [
+          "palmOk"
+        ],
+        "timeline": [
+          {
+            "at": 0.3,
+            "env": "blastOpen",
+            "sfx": "airlock"
+          },
+          {
+            "at": 2.2,
+            "stage": {
+              "rookie": {
+                "walk": [
+                  "door_front",
+                  "door_in",
+                  "door_out"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    "s2_corridor": {
+      "id": "s2_corridor",
+      "type": "shot",
+      "env": "lab",
+      "cinematic": true,
+      "hold": 6.4,
+      "shot": {
+        "cam": "corridor_enter"
+      },
+      "stage": {
+        "rookie": {
+          "at": "corr_in",
+          "face": 0,
+          "pose": "idle"
+        },
+        "don": {
+          "at": "don_wait",
+          "face": "corr_in",
+          "pose": "idle"
+        },
+        "guard1": {
+          "at": "guard_l",
+          "face": "corr_in",
+          "pose": "arms_crossed"
+        },
+        "guard2": {
+          "at": "guard_r",
+          "face": "corr_in",
+          "pose": "arms_crossed"
+        },
+        "tech1": {
+          "at": "tech1_bench",
+          "face": "bench_l",
+          "routine": [
+            "interact",
+            "pick_up",
+            "interact"
+          ]
+        },
+        "tech2": {
+          "at": "tech2_rack",
+          "face": "rack_r",
+          "pose": "kneel_work"
+        },
+        "tech3": {
+          "at": "tech3_console",
+          "face": "console_l",
+          "routine": [
+            "interact"
+          ]
+        },
+        "scientist": {
+          "at": "sci_console",
+          "face": "console_r",
+          "routine": [
+            "interact",
+            "interact",
+            "pick_up"
+          ]
+        }
+      },
+      "cue": {
+        "music": "chronos",
+        "ambience": "lab",
+        "timeline": [
+          {
+            "at": 0.6,
+            "stage": {
+              "rookie": {
+                "walk": "corr_mid"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "s2_labs": {
+      "id": "s2_labs",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 4.4,
+      "shot": {
+        "cam": "corridor_through_glass"
+      },
+      "stage": {
+        "rookie": {
+          "walk": [
+            "corr_mid",
+            "corr_end"
+          ],
+          "face": "don"
+        }
+      }
+    },
+    "s2_l1": {
+      "id": "s2_l1",
+      "type": "line",
+      "stage": {
+        "rookie": {
+          "at": "corr_end",
+          "face": "don",
+          "pose": "idle"
+        },
+        "don": {
+          "face": "rookie"
+        }
+      },
+      "shot": {
+        "cam": "ots:rookie>don",
+        "arc": 8,
+        "duration": 6
+      }
+    },
+    "s2_l2": {
+      "id": "s2_l2",
+      "type": "line",
+      "shot": {
+        "cam": "close:rookie",
+        "push": true
+      }
+    },
+    "s2_l3": {
+      "id": "s2_l3",
+      "type": "line",
+      "shot": {
+        "cam": "close:don",
+        "push": true
+      }
+    },
+    "s2_l4": {
+      "id": "s2_l4",
+      "type": "line",
+      "shot": {
+        "cam": "close:rookie",
+        "side": -1
+      }
+    },
+    "s2_l4_free": {
+      "id": "s2_l4_free",
+      "type": "line",
+      "shot": {
+        "cam": "close:don",
+        "side": -1,
+        "push": true
+      }
+    },
+    "s2_l4_loyal": {
+      "id": "s2_l4_loyal",
+      "type": "line",
+      "shot": {
+        "cam": "close:don",
+        "side": -1,
+        "push": true
+      }
+    },
+    "s2_l4_driver": {
+      "id": "s2_l4_driver",
+      "type": "line",
+      "shot": {
+        "cam": "close:don",
+        "push": true
+      }
+    },
+    "s2_l4_phone": {
+      "id": "s2_l4_phone",
+      "type": "line",
+      "shot": {
+        "cam": "ots:rookie>don"
+      }
+    },
+    "s2_l4_phone2": {
+      "id": "s2_l4_phone2",
+      "type": "line",
+      "shot": {
+        "cam": "close:rookie"
+      }
+    },
+    "s2_l4_phone3": {
+      "id": "s2_l4_phone3",
+      "type": "line",
+      "shot": {
+        "cam": "low:don",
+        "side": -1
+      }
+    },
+    "s2_l5": {
+      "id": "s2_l5",
+      "type": "line",
+      "shot": {
+        "cam": "low:don",
+        "side": -1
+      },
+      "cue": {
+        "timeline": [
+          {
+            "at": 0.6,
+            "env": "deckDoorOpen",
+            "sfx": "airlock"
+          }
+        ]
+      }
+    },
+    "s2_deck": {
+      "id": "s2_deck",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 6.6,
+      "shot": {
+        "cam": "deck_reveal"
+      },
+      "stage": {
+        "don": {
+          "walk": [
+            "deck_in",
+            "deck_mid",
+            "don_glass"
+          ],
+          "pace": "formal",
+          "face": "window"
+        },
+        "guard1": {
+          "walk": "guard_l_deck",
+          "pace": "formal",
+          "face": "deck_mid"
+        },
+        "guard2": {
+          "walk": "guard_r_deck",
+          "pace": "formal",
+          "face": "deck_mid"
+        }
+      },
+      "cue": {
+        "env": [
+          "deckDoorOpen"
+        ],
+        "timeline": [
+          {
+            "at": 1,
+            "stage": {
+              "rookie": {
+                "walk": "deck_in",
+                "face": "window"
+              }
+            }
+          },
+          {
+            "at": 0.5,
+            "sfx": "footsteps"
+          }
+        ]
+      }
+    },
+    "s2_explore": {
+      "id": "s2_explore",
+      "type": "explore",
+      "stage": {
+        "rookie": {
+          "at": "deck_in",
+          "face": "window",
+          "pose": "idle"
+        },
+        "don": {
+          "at": "don_glass",
+          "face": "window",
+          "pose": "idle"
+        },
+        "guard1": {
+          "at": "guard_l_deck",
+          "face": "deck_mid",
+          "pose": "arms_crossed"
+        },
+        "guard2": {
+          "at": "guard_r_deck",
+          "face": "deck_mid",
+          "pose": "arms_crossed"
+        }
+      },
+      "hotspots": [
+        {
+          "id": "don",
+          "label": "The Don",
+          "icon": "chat",
+          "at": "don_glass",
+          "stand": "rookie_glass",
+          "face": "window",
+          "height": 2.2,
+          "ends": true
+        },
+        {
+          "id": "console",
+          "label": "Consoles",
+          "icon": "eye",
+          "at": "console_spot",
+          "stand": "console_stand",
+          "height": 1.7,
+          "lines": [
+            {
+              "speaker": "rookie",
+              "text": "Dates, scrolling past. 1987. 1962. 1931."
+            },
+            {
+              "speaker": "rookie",
+              "text": "Every line further back than the last."
+            }
+          ]
+        },
+        {
+          "id": "plaque",
+          "label": "The plaque",
+          "icon": "target",
+          "at": "plaque_spot",
+          "stand": "plaque_stand",
+          "face": "plaque_spot",
+          "height": 2.9,
+          "lines": [
+            {
+              "speaker": "rookie",
+              "text": "Project Chronos. Temporal displacement research."
+            },
+            {
+              "speaker": "rookie",
+              "text": "Whatever that is, he's paying for every square foot of it."
+            }
+          ]
+        },
+        {
+          "id": "guards",
+          "label": "Bodyguards",
+          "icon": "crown",
+          "at": "guard_r_deck",
+          "stand": "guards_stand",
+          "face": "guard2",
+          "height": 2.2,
+          "lines": [
+            {
+              "speaker": "rookie",
+              "text": "His usual shadows. Four floors underground and he still doesn't go anywhere alone."
+            }
+          ]
+        }
+      ]
+    },
+    "s3_meet": {
+      "id": "s3_meet",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 4.2,
+      "shot": {
+        "cam": "window_group"
+      },
+      "stage": {
+        "don": {
+          "at": "don_glass",
+          "face": "window",
+          "pose": "idle"
+        },
+        "rookie": {
+          "at": "rookie_glass",
+          "face": "window",
+          "pose": "idle"
+        },
+        "guard1": {
+          "at": "guard_l_deck",
+          "face": "deck_mid",
+          "pose": "arms_crossed"
+        },
+        "guard2": {
+          "at": "guard_r_deck",
+          "face": "deck_mid",
+          "pose": "arms_crossed"
+        },
+        "scientist": {
+          "at": "sci_console",
+          "face": "sci_window",
+          "pose": "idle"
+        }
+      },
+      "cue": {
+        "timeline": [
+          {
+            "at": 0.3,
+            "stage": {
+              "scientist": {
+                "walk": "sci_window",
+                "face": "rookie"
+              }
+            }
+          },
+          {
+            "at": 1.6,
+            "stage": {
+              "rookie": {
+                "face": "scientist"
+              }
+            }
+          },
+          {
+            "at": 1.2,
+            "stage": {
+              "don": {
+                "walk": "don_talk",
+                "face": "scientist"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "s3_l1": {
+      "id": "s3_l1",
+      "type": "line",
+      "stage": {
+        "don": {
+          "at": "don_talk",
+          "face": "rookie",
+          "pose": "idle"
+        },
+        "rookie": {
+          "at": "rookie_glass",
+          "face": "scientist",
+          "pose": "idle"
+        },
+        "scientist": {
+          "at": "sci_window",
+          "face": "rookie",
+          "pose": "idle"
+        }
+      },
+      "shot": {
+        "cam": "medium:scientist",
+        "push": true
+      }
+    },
+    "s3_l2": {
+      "id": "s3_l2",
+      "type": "line",
+      "stage": {
+        "don": {
+          "face": "scientist"
+        }
+      },
+      "shot": {
+        "cam": "ots:scientist>don"
+      }
+    },
+    "s3_l3": {
+      "id": "s3_l3",
+      "type": "line",
+      "shot": {
+        "cam": "close:scientist",
+        "push": true
+      }
+    },
+    "s3_l4": {
+      "id": "s3_l4",
+      "type": "line",
+      "shot": {
+        "cam": "close:rookie",
+        "side": -1
+      }
+    },
+    "s3_l5": {
+      "id": "s3_l5",
+      "type": "line",
+      "shot": {
+        "cam": "ots:rookie>scientist",
+        "arc": -6,
+        "duration": 5
+      }
+    },
+    "s3_l6": {
+      "id": "s3_l6",
+      "type": "line",
+      "shot": {
+        "cam": "plaque"
+      }
+    },
+    "s3_l7": {
+      "id": "s3_l7",
+      "type": "line",
+      "shot": {
+        "cam": "close:rookie",
+        "push": true
+      }
+    },
+    "s3_l8": {
+      "id": "s3_l8",
+      "type": "line",
+      "shot": {
+        "cam": "close:scientist",
+        "push": true
+      }
+    },
+    "s3_pause": {
+      "id": "s3_pause",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 2,
+      "shot": {
+        "cam": "close:rookie",
+        "side": -1,
+        "push": true
+      }
+    },
+    "s3_l9": {
+      "id": "s3_l9",
+      "type": "line",
+      "shot": {
+        "cam": "close:rookie",
+        "side": -1,
+        "push": true
+      }
+    },
+    "s3_l10": {
+      "id": "s3_l10",
+      "type": "line",
+      "shot": {
+        "cam": "close:scientist"
+      }
+    },
+    "s3_l11": {
+      "id": "s3_l11",
+      "type": "line",
+      "gesture": "shake_head",
+      "shot": {
+        "cam": "close:rookie"
+      }
+    },
+    "s4_turn": {
+      "id": "s4_turn",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 2.8,
+      "shot": {
+        "cam": "over_rookie"
+      },
+      "stage": {
+        "rookie": {
+          "at": "rookie_glass",
+          "face": "window"
+        },
+        "don": {
+          "at": "don_glass",
+          "face": "window"
+        },
+        "scientist": {
+          "walk": "sci_glass",
+          "face": "window"
+        },
+        "tech3": {
+          "at": "tech3_console",
+          "face": "console_l",
+          "pose": "idle"
+        }
+      },
+      "cue": {
+        "timeline": [
+          {
+            "at": 0.6,
+            "stage": {
+              "tech3": {
+                "play": "interact"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "s4_lights": {
+      "id": "s4_lights",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 6.2,
+      "shot": {
+        "cam": "machine_low"
+      },
+      "stage": {
+        "rookie": {
+          "at": "rookie_glass",
+          "face": "window",
+          "pose": "idle"
+        },
+        "don": {
+          "at": "don_glass",
+          "face": "window",
+          "pose": "idle"
+        },
+        "scientist": {
+          "at": "sci_glass",
+          "face": "window",
+          "pose": "idle"
+        }
+      },
+      "cue": {
+        "timeline": [
+          {
+            "at": 0.3,
+            "env": "chamberLights"
+          },
+          {
+            "at": 0.65,
+            "sfx": "light_clack"
+          },
+          {
+            "at": 1.5,
+            "sfx": "light_clack"
+          },
+          {
+            "at": 2.4,
+            "sfx": "light_clack"
+          },
+          {
+            "at": 3,
+            "env": "machineWake",
+            "sfx": "spinup"
+          }
+        ]
+      }
+    },
+    "s4_orbit": {
+      "id": "s4_orbit",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 5.4,
+      "shot": {
+        "cam": "machine_orbit"
+      }
+    },
+    "s4_top": {
+      "id": "s4_top",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 4.4,
+      "shot": {
+        "cam": "machine_top"
+      }
+    },
+    "s4_l1": {
+      "id": "s4_l1",
+      "type": "line",
+      "shot": {
+        "cam": "machine_back"
+      }
+    },
+    "s4_l2": {
+      "id": "s4_l2",
+      "type": "line",
+      "stage": {
+        "rookie": {
+          "face": "scientist"
+        }
+      },
+      "shot": {
+        "cam": "close:rookie"
+      }
+    },
+    "s4_l3": {
+      "id": "s4_l3",
+      "type": "line",
+      "stage": {
+        "scientist": {
+          "face": "rookie"
+        }
+      },
+      "shot": {
+        "cam": "close:scientist",
+        "push": true
+      }
+    },
+    "s4_offer": {
+      "id": "s4_offer",
+      "type": "line",
+      "shot": {
+        "cam": "ots:rookie>scientist",
+        "side": -1
+      }
+    },
+    "s4_honours": {
+      "id": "s4_honours",
+      "type": "choice",
+      "choiceId": "honours",
+      "style": "dialogue",
+      "shot": {
+        "cam": "ots:scientist>rookie",
+        "arc": 5,
+        "duration": 8
+      },
+      "optionStaging": {
+        "press": {
+          "icon": "hand"
+        },
+        "watch": {
+          "icon": "eye"
+        },
+        "don": {
+          "icon": "crown"
+        }
+      }
+    },
+    "s4_honours_don": {
+      "id": "s4_honours_don",
+      "type": "line",
+      "stage": {
+        "don": {
+          "face": "scientist"
+        }
+      },
+      "shot": {
+        "cam": "low:don",
+        "side": -1
+      }
+    },
+    "s4_console": {
+      "id": "s4_console",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 3.4,
+      "shot": {
+        "cam": "deck_wide"
+      },
+      "stage": {
+        "rookie": {
+          "walk": [
+            "deck_mid",
+            "sci_console"
+          ],
+          "face": "console_r"
+        },
+        "scientist": {
+          "walk": "console_beside",
+          "face": "rookie"
+        },
+        "don": {
+          "face": "console_r"
+        }
+      }
+    },
+    "s4_console_l1": {
+      "id": "s4_console_l1",
+      "type": "line",
+      "stage": {
+        "rookie": {
+          "at": "sci_console",
+          "face": "console_r",
+          "pose": "idle"
+        },
+        "scientist": {
+          "at": "console_beside",
+          "face": "rookie",
+          "pose": "idle"
+        }
+      },
+      "shot": {
+        "cam": "console_ots"
+      }
+    },
+    "s4_calibrate": {
+      "id": "s4_calibrate",
+      "type": "qte",
+      "mode": "timing",
+      "label": "Stabilise the field",
+      "hint": "Tap as each peak lines up",
+      "count": 3,
+      "window": 1250,
+      "result": "calibration",
+      "shot": {
+        "cam": "console_ots"
+      },
+      "cue": {
+        "timeline": [
+          {
+            "at": 0.2,
+            "env": "machineWake"
+          }
+        ]
+      },
+      "onHit": [
+        [
+          {
+            "at": 0,
+            "sfx": "light_clack",
+            "stage": {
+              "rookie": {
+                "play": "interact"
+              }
+            },
+            "shake": 0.01
+          }
+        ],
+        [
+          {
+            "at": 0,
+            "sfx": "light_clack",
+            "stage": {
+              "rookie": {
+                "play": "interact"
+              }
+            },
+            "shot": {
+              "cam": "machine_low"
+            }
+          }
+        ],
+        [
+          {
+            "at": 0,
+            "sfx": "light_clack",
+            "stage": {
+              "rookie": {
+                "play": "interact"
+              }
+            },
+            "shot": {
+              "cam": "console_ots"
+            }
+          }
+        ]
+      ],
+      "onMiss": [
+        [
+          {
+            "at": 0,
+            "sfx": "denied",
+            "shake": 0.02
+          }
+        ]
+      ]
+    },
+    "s4_demo": {
+      "id": "s4_demo",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 4.4,
+      "shot": {
+        "cam": "machine_core"
+      },
+      "stage": {
+        "scientist": {
+          "face": "window"
+        }
+      },
+      "cue": {
+        "timeline": [
+          {
+            "at": 0.2,
+            "env": "machineSpin",
+            "sfx": "spinup"
+          }
+        ]
+      }
+    },
+    "s4_pulse": {
+      "id": "s4_pulse",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 3.2,
+      "shot": {
+        "cam": "machine_low"
+      },
+      "cue": {
+        "env": [
+          "machineSpin"
+        ],
+        "timeline": [
+          {
+            "at": 0.7,
+            "env": "machinePulse",
+            "sfx": "pulse",
+            "flash": true,
+            "shake": 0.05
+          }
+        ]
+      }
+    },
+    "s4_gone": {
+      "id": "s4_gone",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 2.6,
+      "shot": {
+        "cam": "machine_core"
+      },
+      "cue": {
+        "env": [
+          "machinePulse"
+        ]
+      }
+    },
+    "s4_back": {
+      "id": "s4_back",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 3.4,
+      "shot": {
+        "cam": "machine_core"
+      },
+      "cue": {
+        "timeline": [
+          {
+            "at": 1,
+            "env": "payloadReturn",
+            "sfx": "pulse",
+            "shake": 0.02
+          },
+          {
+            "at": 2.2,
+            "env": "machineWake",
+            "sfx": "spindown"
+          }
+        ]
+      }
+    },
+    "s4_steady": {
+      "id": "s4_steady",
+      "type": "line",
+      "shot": {
+        "cam": "close:scientist",
+        "push": true
+      }
+    },
+    "s4_steady2": {
+      "id": "s4_steady2",
+      "type": "line",
+      "shot": {
+        "cam": "close:rookie",
+        "side": -1
+      }
+    },
+    "s4_shaky": {
+      "id": "s4_shaky",
+      "type": "line",
+      "shot": {
+        "cam": "close:scientist",
+        "push": true
+      }
+    },
+    "s4_shaky2": {
+      "id": "s4_shaky2",
+      "type": "line",
+      "shot": {
+        "cam": "low:don",
+        "side": -1
+      }
+    },
+    "s4_well": {
+      "id": "s4_well",
+      "type": "line",
+      "cue": {
+        "env": [
+          "payloadReturn",
+          "machineWake"
+        ]
+      },
+      "stage": {
+        "rookie": {
+          "at": "rookie_glass",
+          "face": "don",
+          "pose": "idle"
+        },
+        "don": {
+          "at": "don_glass",
+          "face": "rookie",
+          "pose": "idle"
+        },
+        "scientist": {
+          "at": "sci_glass",
+          "face": "window",
+          "pose": "idle"
+        }
+      },
+      "shot": {
+        "cam": "close:don",
+        "push": true
+      }
+    },
+    "s4_react": {
+      "id": "s4_react",
+      "type": "choice",
+      "choiceId": "reaction",
+      "style": "dialogue",
+      "shot": {
+        "cam": "ots:don>rookie",
+        "arc": 5,
+        "duration": 8
+      },
+      "optionStaging": {
+        "awe": {
+          "icon": "crown"
+        },
+        "power": {
+          "icon": "eye"
+        },
+        "wary": {
+          "icon": "warning"
+        }
+      }
+    },
+    "s4_r_awe": {
+      "id": "s4_r_awe",
+      "type": "line",
+      "shot": {
+        "cam": "close:don",
+        "side": -1
+      }
+    },
+    "s4_r_power": {
+      "id": "s4_r_power",
+      "type": "line",
+      "shot": {
+        "cam": "low:don",
+        "side": -1
+      }
+    },
+    "s4_r_wary": {
+      "id": "s4_r_wary",
+      "type": "line",
+      "stage": {
+        "scientist": {
+          "face": "rookie"
+        }
+      },
+      "shot": {
+        "cam": "close:scientist",
+        "push": true
+      }
+    },
+    "s4_l4": {
+      "id": "s4_l4",
+      "type": "line",
+      "cue": {
+        "env": [
+          "payloadReturn",
+          "machineWake"
+        ]
+      },
+      "stage": {
+        "rookie": {
+          "at": "rookie_glass",
+          "face": "scientist",
+          "pose": "idle"
+        },
+        "scientist": {
+          "at": "sci_glass",
+          "face": "rookie",
+          "pose": "idle"
+        }
+      },
+      "shot": {
+        "cam": "close:rookie",
+        "side": -1,
+        "push": true
+      }
+    },
+    "s4_l5": {
+      "id": "s4_l5",
+      "type": "line",
+      "shot": {
+        "cam": "close:scientist",
+        "push": true
+      }
+    },
+    "s5_hub": {
+      "id": "s5_hub",
+      "type": "choice",
+      "choiceId": "question",
+      "style": "dialogue",
+      "stage": {
+        "don": {
+          "at": "don_talk",
+          "face": "rookie",
+          "pose": "idle"
+        },
+        "rookie": {
+          "at": "rookie_glass",
+          "face": "scientist",
+          "pose": "idle"
+        },
+        "scientist": {
+          "at": "sci_window",
+          "face": "rookie",
+          "pose": "idle"
+        }
+      },
+      "shot": {
+        "cam": "ots:scientist>rookie",
+        "arc": 5,
+        "duration": 9
+      },
+      "optionStaging": {
+        "risks": {
+          "icon": "warning"
+        },
+        "ambition": {
+          "icon": "eye",
+          "say": "What exactly does he want from this?"
+        },
+        "worked": {
+          "icon": "atom"
+        },
+        "done": {
+          "icon": "skip",
+          "say": false
+        }
+      }
+    },
+    "s5_risks_1": {
+      "id": "s5_risks_1",
+      "type": "line",
+      "shot": {
+        "cam": "close:scientist",
+        "push": true
+      }
+    },
+    "s5_risks_2": {
+      "id": "s5_risks_2",
+      "type": "line",
+      "shot": {
+        "cam": "close:rookie",
+        "side": -1
+      }
+    },
+    "s5_risks_3": {
+      "id": "s5_risks_3",
+      "type": "line",
+      "gesture": "nod",
+      "shot": {
+        "cam": "ots:rookie>scientist"
+      }
+    },
+    "s5_ambition_1": {
+      "id": "s5_ambition_1",
+      "type": "line",
+      "stage": {
+        "scientist": {
+          "face": "don"
+        }
+      },
+      "shot": {
+        "cam": "close:scientist"
+      }
+    },
+    "s5_ambition_2": {
+      "id": "s5_ambition_2",
+      "type": "line",
+      "stage": {
+        "rookie": {
+          "face": "don"
+        },
+        "don": {
+          "face": "rookie"
+        }
+      },
+      "shot": {
+        "cam": "close:don",
+        "push": true
+      }
+    },
+    "s5_ambition_3": {
+      "id": "s5_ambition_3",
+      "type": "line",
+      "shot": {
+        "cam": "ots:don>rookie"
+      }
+    },
+    "s5_ambition_4": {
+      "id": "s5_ambition_4",
+      "type": "line",
+      "shot": {
+        "cam": "low:don",
+        "side": -1
+      }
+    },
+    "s5_worked_1": {
+      "id": "s5_worked_1",
+      "type": "line",
+      "shot": {
+        "cam": "close:scientist",
+        "push": true
+      }
+    },
+    "s5_worked_2": {
+      "id": "s5_worked_2",
+      "type": "line",
+      "shot": {
+        "cam": "close:rookie",
+        "side": -1
+      }
+    },
+    "s5_worked_3": {
+      "id": "s5_worked_3",
+      "type": "line",
+      "shot": {
+        "cam": "close:scientist",
+        "push": true
+      }
+    },
+    "s6_l1": {
+      "id": "s6_l1",
+      "type": "line",
+      "stage": {
+        "don": {
+          "at": "don_talk",
+          "face": "rookie",
+          "pose": "idle"
+        },
+        "rookie": {
+          "at": "rookie_glass",
+          "face": "scientist",
+          "pose": "idle"
+        },
+        "scientist": {
+          "at": "sci_window",
+          "face": "rookie",
+          "pose": "idle"
+        }
+      },
+      "shot": {
+        "cam": "ots:rookie>scientist",
+        "arc": 6,
+        "duration": 6
+      },
+      "cue": {
+        "music": "tension"
+      }
+    },
+    "s6_l2": {
+      "id": "s6_l2",
+      "type": "line",
+      "shot": {
+        "cam": "close:rookie",
+        "side": -1
+      }
+    },
+    "s6_l3": {
+      "id": "s6_l3",
+      "type": "line",
+      "shot": {
+        "cam": "close:scientist",
+        "push": true
+      }
+    },
+    "s6_l4": {
+      "id": "s6_l4",
+      "type": "line",
+      "stage": {
+        "don": {
+          "face": "scientist"
+        },
+        "scientist": {
+          "face": "don"
+        }
+      },
+      "shot": {
+        "cam": "close:don"
+      }
+    },
+    "s6_l5": {
+      "id": "s6_l5",
+      "type": "line",
+      "gesture": "shake_head",
+      "shot": {
+        "cam": "ots:don>scientist"
+      }
+    },
+    "s6_l6": {
+      "id": "s6_l6",
+      "type": "line",
+      "shot": {
+        "cam": "low:don",
+        "side": 1
+      }
+    },
+    "s6_side": {
+      "id": "s6_side",
+      "type": "choice",
+      "choiceId": "side",
+      "style": "dialogue",
+      "shot": {
+        "cam": "close:rookie",
+        "side": -1,
+        "push": true
+      },
+      "optionStaging": {
+        "doctor": {
+          "icon": "scales"
+        },
+        "don": {
+          "icon": "crown"
+        },
+        "quiet": {
+          "icon": "dots",
+          "say": false
+        }
+      }
+    },
+    "s6_side_doctor": {
+      "id": "s6_side_doctor",
+      "type": "line",
+      "stage": {
+        "don": {
+          "face": "rookie"
+        }
+      },
+      "shot": {
+        "cam": "close:don",
+        "push": true
+      }
+    },
+    "s6_side_doctor2": {
+      "id": "s6_side_doctor2",
+      "type": "line",
+      "stage": {
+        "scientist": {
+          "face": "rookie"
+        }
+      },
+      "shot": {
+        "cam": "close:scientist"
+      }
+    },
+    "s6_side_don": {
+      "id": "s6_side_don",
+      "type": "line",
+      "gesture": "arms_crossed",
+      "stage": {
+        "scientist": {
+          "face": "rookie"
+        }
+      },
+      "shot": {
+        "cam": "close:scientist",
+        "push": true
+      }
+    },
+    "s6_side_don2": {
+      "id": "s6_side_don2",
+      "type": "line",
+      "shot": {
+        "cam": "ots:scientist>don"
+      }
+    },
+    "s6_side_quiet": {
+      "id": "s6_side_quiet",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 2.2,
+      "shot": {
+        "cam": "close:rookie",
+        "side": -1,
+        "push": true
+      }
+    },
+    "s6_l7": {
+      "id": "s6_l7",
+      "type": "line",
+      "stage": {
+        "rookie": {
+          "face": "scientist"
+        },
+        "scientist": {
+          "face": "rookie"
+        }
+      },
+      "shot": {
+        "cam": "close:rookie",
+        "side": -1,
+        "push": true
+      }
+    },
+    "s6_l8": {
+      "id": "s6_l8",
+      "type": "line",
+      "shot": {
+        "cam": "close:scientist",
+        "push": true
+      }
+    },
+    "s6_l8_trust": {
+      "id": "s6_l8_trust",
+      "type": "line",
+      "shot": {
+        "cam": "close:scientist",
+        "side": -1,
+        "push": true
+      }
+    },
+    "s6_pause": {
+      "id": "s6_pause",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 3.2,
+      "shot": {
+        "cam": "machine_back"
+      }
+    },
+    "s6_l9": {
+      "id": "s6_l9",
+      "type": "line",
+      "stage": {
+        "don": {
+          "face": "rookie"
+        },
+        "rookie": {
+          "face": "don"
+        }
+      },
+      "shot": {
+        "cam": "close:don",
+        "push": true
+      }
+    },
+    "s6_stance": {
+      "id": "s6_stance",
+      "type": "choice",
+      "choiceId": "stance",
+      "style": "dialogue",
+      "shot": {
+        "cam": "ots:don>rookie",
+        "arc": 6,
+        "duration": 8
+      },
+      "optionStaging": {
+        "word": {
+          "icon": "bolt"
+        },
+        "someone": {
+          "icon": "eye"
+        },
+        "silent": {
+          "icon": "dots",
+          "say": false
+        }
+      }
+    },
+    "s6_r_word": {
+      "id": "s6_r_word",
+      "type": "line",
+      "shot": {
+        "cam": "low:don",
+        "side": -1
+      }
+    },
+    "s6_r_someone": {
+      "id": "s6_r_someone",
+      "type": "line",
+      "shot": {
+        "cam": "close:don",
+        "push": true
+      }
+    },
+    "s6_look": {
+      "id": "s6_look",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 6.4,
+      "shot": {
+        "cam": "glass_rookie"
+      },
+      "stage": {
+        "rookie": {
+          "walk": "rookie_glass",
+          "face": "window"
+        }
+      },
+      "cue": {
+        "music": null,
+        "timeline": [
+          {
+            "at": 1.2,
+            "stage": {
+              "don": {
+                "face": "window"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "s6_rings": {
+      "id": "s6_rings",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 4.6,
+      "shot": {
+        "cam": "over_rookie",
+        "push": true
+      },
+      "cue": {
+        "music": "resolve"
+      }
+    },
+    "s6_close_doctor": {
+      "id": "s6_close_doctor",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 3.6,
+      "shot": {
+        "cam": "machine_back"
+      }
+    },
+    "s6_close_don": {
+      "id": "s6_close_don",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 3.6,
+      "shot": {
+        "cam": "machine_back"
+      }
+    },
+    "s6_phone": {
+      "id": "s6_phone",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 3.4,
+      "shot": {
+        "cam": "medium:rookie",
+        "side": -1
+      }
+    },
+    "s6_complete": {
+      "id": "s6_complete",
+      "type": "complete",
+      "cinematic": true
+    }
+  }
+}

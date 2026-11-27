@@ -1,0 +1,18 @@
+{
+  "id": "c_yard_05",
+  "kit": "yard",
+  "title": "Diesel Money",
+  "client": "Sal",
+  "risk": "Low",
+  "pay": 350,
+  "respect": 14,
+  "mood": "proud",
+  "pitch": "Fitz borrowed from Sal to get his lorry running. It runs. He hasn't paid, and says old drivers don't owe anyone.",
+  "cast": { "contact": "fence", "heavy": "heavy" },
+  "names": { "contact": "Fitz", "heavy": "Dom" },
+  "hotspots": {
+    "contact": "Fitz",
+    "clue_a": { "label": "The boxcar", "lines": ["Four new lorry tyres, still in their wrapping, stacked in the boxcar. Not cheap. Not paid for with nothing."] },
+    "clue_b": { "label": "The van", "lines": ["His run sheet, stuffed in the burned-out van's door. Three loads this week. Paid on delivery, every one."] }
+  }
+}

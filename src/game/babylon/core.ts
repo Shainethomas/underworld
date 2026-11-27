@@ -1,0 +1,37 @@
+// The renderer's classes as the rest of the game sees them (@render/core).
+// Everything outside src/game/babylon imports engine types and classes from
+// here, never from @babylonjs directly, so the engine stays behind one
+// seam (src/game/babylon). See ARCHITECTURE.md, "3D rendering engine".
+import '@babylonjs/core/Culling/ray'
+import '@babylonjs/core/Particles/particleSystemComponent'
+
+export type { AbstractEngine } from '@babylonjs/core/Engines/abstractEngine'
+export type { AnimationGroup } from '@babylonjs/core/Animations/animationGroup'
+export type { AssetContainer } from '@babylonjs/core/assetContainer'
+export type { ICustomAnimationFrameRequester } from '@babylonjs/core/Misc/customAnimationFrameRequester'
+export type { Node } from '@babylonjs/core/node'
+export type { Scene } from '@babylonjs/core/scene'
+export type { SpotLight } from '@babylonjs/core/Lights/spotLight'
+export type { AbstractMesh } from '@babylonjs/core/Meshes/abstractMesh'
+export { SceneInstrumentation } from '@babylonjs/core/Instrumentation/sceneInstrumentation'
+export { BoundingInfo } from '@babylonjs/core/Culling/boundingInfo'
+export { PointLight } from '@babylonjs/core/Lights/pointLight'
+export { FresnelParameters } from '@babylonjs/core/Materials/fresnelParameters'
+export { Material } from '@babylonjs/core/Materials/material'
+export { PBRMaterial } from '@babylonjs/core/Materials/PBR/pbrMaterial'
+export { StandardMaterial } from '@babylonjs/core/Materials/standardMaterial'
+export { DynamicTexture } from '@babylonjs/core/Materials/Textures/dynamicTexture'
+export { MirrorTexture } from '@babylonjs/core/Materials/Textures/mirrorTexture'
+export { Texture } from '@babylonjs/core/Materials/Textures/texture'
+export { Color3, Color4 } from '@babylonjs/core/Maths/math.color'
+export { Plane } from '@babylonjs/core/Maths/math.plane'
+export { Ray } from '@babylonjs/core/Culling/ray'
+export { Matrix, Quaternion, Vector3 } from '@babylonjs/core/Maths/math.vector'
+export { CreateBox } from '@babylonjs/core/Meshes/Builders/boxBuilder'
+export { CreateTorus } from '@babylonjs/core/Meshes/Builders/torusBuilder'
+export { Mesh } from '@babylonjs/core/Meshes/mesh'
+export { TransformNode } from '@babylonjs/core/Meshes/transformNode'
+export { SphereParticleEmitter } from '@babylonjs/core/Particles/EmitterTypes/sphereParticleEmitter'
+export { ParticleSystem } from '@babylonjs/core/Particles/particleSystem'
+
+export { VertexData } from '@babylonjs/core/Meshes/mesh.vertexData'

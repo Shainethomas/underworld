@@ -1,0 +1,1789 @@
+{
+  "scene": {
+    "id": "s02",
+    "index": 2,
+    "chapter": {
+      "number": 1,
+      "title": "A Place at the Table"
+    },
+    "title": "The Opportunity",
+    "environments": [
+      "gym_ext",
+      "city",
+      "docks",
+      "estate",
+      "room"
+    ],
+    "cast": [
+      "rookie",
+      "lucas",
+      "sal",
+      "guard1",
+      "guard2"
+    ],
+    "summary": [
+      "respect",
+      "cash",
+      "discipline",
+      "independence",
+      "ravi_trust",
+      "don_loyalty",
+      "heat",
+      "intel",
+      "varga"
+    ],
+    "next": {
+      "id": "s03",
+      "title": "A Bigger Problem",
+      "job": {
+        "name": "Calder Yard",
+        "pay": "$2,400",
+        "risk": "High",
+        "pitch": "Collect Victor's package from a jumpy contact at the old rail yard. Another crew has been seen nearby."
+      }
+    }
+  },
+  "beats": {
+    "s1_title": {
+      "id": "s1_title",
+      "type": "title",
+      "env": "gym_ext",
+      "cinematic": true,
+      "chapter": "Chapter 1",
+      "title": "A Place at the Table",
+      "subtitle": "Scene 2 — The Opportunity",
+      "shot": {
+        "cam": "ext_establish"
+      },
+      "cue": {
+        "music": "theme",
+        "ambience": "street",
+        "env": [
+          "doorsClose"
+        ]
+      },
+      "stage": {
+        "rookie": {
+          "at": "street",
+          "face": 90,
+          "pose": "idle",
+          "carry": null,
+          "look": null
+        },
+        "lucas": {
+          "at": "lucas_wait",
+          "face": "street",
+          "pose": "idle",
+          "look": null
+        }
+      }
+    },
+    "s4_arrive": {
+      "id": "s4_arrive",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 4.6,
+      "shot": {
+        "cam": "ext_establish"
+      },
+      "stage": {
+        "rookie": {
+          "at": "street",
+          "face": 90,
+          "pose": "idle",
+          "carry": null,
+          "look": null
+        },
+        "lucas": {
+          "at": "lucas_wait",
+          "face": "street",
+          "pose": "idle",
+          "look": null
+        }
+      },
+      "cue": {
+        "music": "tension",
+        "ambience": "street",
+        "fade": 2,
+        "env": [
+          "doorsClose"
+        ],
+        "timeline": [
+          {
+            "at": 0.3,
+            "stage": {
+              "rookie": {
+                "walk": [
+                  "approach",
+                  "rookie_meet"
+                ],
+                "face": "lucas"
+              }
+            }
+          },
+          {
+            "at": 1.6,
+            "stage": {
+              "lucas": {
+                "face": "rookie",
+                "look": "rookie"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "s4_l1": {
+      "id": "s4_l1",
+      "type": "line",
+      "shot": {
+        "cam": "ext_meet"
+      },
+      "stage": {
+        "rookie": {
+          "at": "rookie_meet",
+          "face": "lucas",
+          "pose": "idle",
+          "carry": null,
+          "look": null
+        },
+        "lucas": {
+          "at": "lucas_wait",
+          "face": "rookie",
+          "pose": "idle",
+          "look": null
+        }
+      }
+    },
+    "s4_l2": {
+      "id": "s4_l2",
+      "type": "line",
+      "shot": {
+        "cam": "medium:lucas"
+      }
+    },
+    "s4_l3": {
+      "id": "s4_l3",
+      "type": "line",
+      "shot": {
+        "cam": "medium:lucas"
+      }
+    },
+    "s4_r_done": {
+      "id": "s4_r_done",
+      "type": "line",
+      "gesture": "nod",
+      "shot": {
+        "cam": "ext_meet"
+      }
+    },
+    "s4_r_got": {
+      "id": "s4_r_got",
+      "type": "line",
+      "gesture": "nod",
+      "shot": {
+        "cam": "ext_meet"
+      }
+    },
+    "s4_r_someone": {
+      "id": "s4_r_someone",
+      "type": "line",
+      "shot": {
+        "cam": "medium:lucas"
+      }
+    },
+    "s4_l5": {
+      "id": "s4_l5",
+      "type": "line",
+      "shot": {
+        "cam": "ext_meet"
+      }
+    },
+    "s4_leave": {
+      "id": "s4_leave",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 4,
+      "shot": {
+        "cam": "ext_establish"
+      },
+      "stage": {
+        "lucas": {
+          "look": "rookie"
+        }
+      },
+      "cue": {
+        "timeline": [
+          {
+            "at": 0.2,
+            "stage": {
+              "rookie": {
+                "walk": [
+                  "approach",
+                  "street",
+                  [
+                    -8.2,
+                    -2.7
+                  ]
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    "s4_drive": {
+      "id": "s4_drive",
+      "type": "drive",
+      "env": "city",
+      "destination": "Pier Nine",
+      "distance": 300,
+      "shot": {
+        "cam": "drive_chase"
+      },
+      "cue": {
+        "music": "drive",
+        "ambience": "car",
+        "fade": 2
+      }
+    },
+    "s5_arrive": {
+      "id": "s5_arrive",
+      "type": "shot",
+      "env": "docks",
+      "cinematic": true,
+      "hold": 4.2,
+      "shot": {
+        "cam": "dock_wide"
+      },
+      "stage": {
+        "rookie": {
+          "at": "car_side",
+          "face": 20,
+          "pose": "idle",
+          "carry": null,
+          "look": null
+        },
+        "sal": {
+          "at": "sal_wait",
+          "face": "threshold",
+          "pose": "idle",
+          "look": null
+        }
+      },
+      "cue": {
+        "music": "tension",
+        "ambience": "street",
+        "fade": 2,
+        "env": [
+          "parcelBack"
+        ],
+        "timeline": [
+          {
+            "at": 0.3,
+            "sfx": "door_close"
+          },
+          {
+            "at": 1,
+            "stage": {
+              "rookie": {
+                "walk": [
+                  [
+                    1.6,
+                    -3.4
+                  ]
+                ],
+                "face": "door_out"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "s5_explore": {
+      "id": "s5_explore",
+      "type": "explore",
+      "stage": {
+        "sal": {
+          "at": "sal_wait",
+          "face": "threshold",
+          "pose": "idle"
+        }
+      },
+      "hotspots": [
+        {
+          "id": "sal",
+          "label": "Sal",
+          "icon": "chat",
+          "at": "sal_wait",
+          "stand": "threshold",
+          "face": "sal_wait",
+          "height": 2.15,
+          "ends": true
+        },
+        {
+          "id": "water",
+          "label": "The water",
+          "icon": "eye",
+          "at": "quay_edge",
+          "stand": "quay_stand",
+          "face": "quay_edge",
+          "height": 1.4,
+          "lines": [
+            {
+              "speaker": "rookie",
+              "text": "Lucas always says the water down here keeps secrets better than people do."
+            }
+          ]
+        }
+      ]
+    },
+    "s5_l3": {
+      "id": "s5_l3",
+      "type": "choice",
+      "choiceId": "pickup",
+      "style": "dialogue",
+      "shot": {
+        "cam": "dock_inside"
+      },
+      "stage": {
+        "sal": {
+          "look": "bench"
+        }
+      },
+      "optionStaging": {
+        "sealed": {
+          "icon": "lock"
+        },
+        "heavy": {
+          "icon": "hand"
+        },
+        "friendly": {
+          "icon": "bolt"
+        }
+      },
+      "cue": {
+        "timeline": [
+          {
+            "at": 1.4,
+            "stage": {
+              "sal": {
+                "look": null
+              }
+            }
+          }
+        ]
+      }
+    },
+    "s5_r_sealed": {
+      "id": "s5_r_sealed",
+      "type": "line",
+      "gesture": "nod",
+      "shot": {
+        "cam": "dock_door"
+      }
+    },
+    "s5_r_heavy": {
+      "id": "s5_r_heavy",
+      "type": "line",
+      "shot": {
+        "cam": "dock_door"
+      }
+    },
+    "s5_r_friendly": {
+      "id": "s5_r_friendly",
+      "type": "line",
+      "gesture": "shake_head",
+      "shot": {
+        "cam": "dock_door"
+      }
+    },
+    "s5_take": {
+      "id": "s5_take",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 6.4,
+      "shot": {
+        "cam": "dock_bench"
+      },
+      "stage": {
+        "rookie": {
+          "walk": "bench_stand",
+          "face": "bench",
+          "pose": "idle",
+          "look": null
+        },
+        "sal": {
+          "walk": [
+            [
+              -0.45,
+              14.6
+            ]
+          ],
+          "face": "rookie",
+          "pose": "idle"
+        }
+      },
+      "cue": {
+        "timeline": [
+          {
+            "at": 2.1,
+            "stage": {
+              "rookie": {
+                "play": "pick_up"
+              }
+            }
+          },
+          {
+            "at": 3.6,
+            "env": "parcelTaken",
+            "stage": {
+              "rookie": {
+                "carry": "package"
+              }
+            }
+          },
+          {
+            "at": 5.4,
+            "stage": {
+              "rookie": {
+                "face": "sal"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "s5_l4": {
+      "id": "s5_l4",
+      "type": "line",
+      "shot": {
+        "cam": "dock_pair"
+      },
+      "stage": {
+        "rookie": {
+          "at": "bench_stand",
+          "face": "sal",
+          "carry": "package",
+          "pose": "idle"
+        },
+        "sal": {
+          "at": [
+            -0.45,
+            14.6
+          ],
+          "face": "rookie",
+          "pose": "arms_crossed"
+        }
+      }
+    },
+    "s6_drive": {
+      "id": "s6_drive",
+      "type": "drive",
+      "env": "city",
+      "destination": "Hollis Hill",
+      "distance": 420,
+      "shot": {
+        "cam": "drive_chase"
+      },
+      "cue": {
+        "music": "drive",
+        "ambience": "car",
+        "fade": 2
+      }
+    },
+    "s7_arrive": {
+      "id": "s7_arrive",
+      "type": "shot",
+      "env": "estate",
+      "cinematic": true,
+      "hold": 5,
+      "shot": {
+        "cam": "drive_arrive"
+      },
+      "stage": {
+        "rookie": {
+          "show": false,
+          "carry": "package"
+        },
+        "guard1": {
+          "at": "door_guard",
+          "face": 180,
+          "pose": "idle",
+          "carry": null,
+          "look": null
+        },
+        "guard2": {
+          "at": "terrace_guard",
+          "face": 180,
+          "pose": "idle",
+          "carry": "envelope",
+          "look": null
+        }
+      },
+      "cue": {
+        "music": "tension",
+        "ambience": "rain",
+        "fade": 2,
+        "env": [
+          "noBanner",
+          "carArrive"
+        ]
+      }
+    },
+    "s7_out": {
+      "id": "s7_out",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 3.4,
+      "shot": {
+        "cam": "car_side_out"
+      },
+      "stage": {
+        "rookie": {
+          "at": "car_door",
+          "face": "drive_mid",
+          "pose": "idle",
+          "carry": "package",
+          "look": null
+        }
+      },
+      "cue": {
+        "timeline": [
+          {
+            "at": 0.1,
+            "sfx": "door_close"
+          },
+          {
+            "at": 1.1,
+            "stage": {
+              "rookie": {
+                "walk": [
+                  [
+                    6.6,
+                    3.4
+                  ]
+                ],
+                "face": "door_guard"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "s7_explore": {
+      "id": "s7_explore",
+      "type": "explore",
+      "stage": {
+        "guard1": {
+          "look": "rookie"
+        }
+      },
+      "hotspots": [
+        {
+          "id": "door",
+          "label": "The man at the door",
+          "icon": "chat",
+          "at": "door_guard",
+          "stand": "delivery_stand",
+          "face": "door_guard",
+          "height": 2.15,
+          "ends": true
+        },
+        {
+          "id": "fountain",
+          "label": "Fountain",
+          "icon": "eye",
+          "at": "fountain",
+          "stand": "fountain_stand",
+          "face": "fountain",
+          "height": 0.6,
+          "lines": [
+            {
+              "speaker": "rookie",
+              "text": "Somebody up here likes people to know what they've got."
+            }
+          ]
+        }
+      ]
+    },
+    "s7_l1": {
+      "id": "s7_l1",
+      "type": "choice",
+      "choiceId": "door_greet",
+      "style": "dialogue",
+      "shot": {
+        "cam": "steps_side"
+      },
+      "optionStaging": {
+        "delivery": {
+          "icon": "chat"
+        },
+        "expected": {
+          "icon": "bolt"
+        },
+        "door": {
+          "icon": "eye"
+        }
+      },
+      "stage": {
+        "rookie": {
+          "at": "delivery_stand",
+          "face": "guard1",
+          "pose": "idle",
+          "look": null
+        },
+        "guard1": {
+          "at": "door_guard",
+          "face": "rookie",
+          "pose": "idle",
+          "look": null
+        }
+      },
+      "cue": {
+        "timeline": [
+          {
+            "at": 0.4,
+            "stage": {
+              "guard2": {
+                "walk": "door_guard2",
+                "y": 0,
+                "face": "rookie"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "s7_r_expected": {
+      "id": "s7_r_expected",
+      "type": "line",
+      "shot": {
+        "cam": "ots:rookie>guard1"
+      }
+    },
+    "s7_r_door": {
+      "id": "s7_r_door",
+      "type": "line",
+      "shot": {
+        "cam": "ots:rookie>guard1"
+      }
+    },
+    "s7_l3": {
+      "id": "s7_l3",
+      "type": "choice",
+      "choiceId": "doorstep",
+      "style": "dialogue",
+      "shot": {
+        "cam": "ots:rookie>guard1"
+      },
+      "stage": {
+        "guard2": {
+          "at": "door_guard2",
+          "y": 0,
+          "face": "rookie",
+          "pose": "idle"
+        }
+      },
+      "optionStaging": {
+        "clean": {
+          "icon": "eye"
+        },
+        "cocky": {
+          "icon": "bolt"
+        },
+        "check": {
+          "icon": "hand"
+        }
+      }
+    },
+    "s7_r_clean": {
+      "id": "s7_r_clean",
+      "type": "line",
+      "gesture": "nod",
+      "shot": {
+        "cam": "steps_side"
+      }
+    },
+    "s7_r_cocky": {
+      "id": "s7_r_cocky",
+      "type": "line",
+      "shot": {
+        "cam": "steps_side"
+      }
+    },
+    "s7_r_check": {
+      "id": "s7_r_check",
+      "type": "line",
+      "shot": {
+        "cam": "steps_side"
+      }
+    },
+    "s7_handover": {
+      "id": "s7_handover",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 4.6,
+      "shot": {
+        "cam": "steps_side"
+      },
+      "stage": {
+        "rookie": {
+          "at": "delivery_stand",
+          "face": "guard1",
+          "pose": "idle",
+          "carry": "package"
+        },
+        "guard1": {
+          "at": "door_guard",
+          "face": "rookie",
+          "pose": "idle",
+          "carry": null
+        },
+        "guard2": {
+          "at": "door_guard2",
+          "y": 0,
+          "face": "rookie",
+          "pose": "idle",
+          "carry": "envelope"
+        }
+      },
+      "cue": {
+        "timeline": [
+          {
+            "at": 0.3,
+            "stage": {
+              "rookie": {
+                "play": "interact"
+              }
+            }
+          },
+          {
+            "at": 1.25,
+            "stage": {
+              "rookie": {
+                "carry": null
+              },
+              "guard1": {
+                "carry": "package"
+              }
+            }
+          },
+          {
+            "at": 2,
+            "stage": {
+              "rookie": {
+                "face": "guard2"
+              },
+              "guard2": {
+                "play": "interact"
+              }
+            }
+          },
+          {
+            "at": 2.95,
+            "stage": {
+              "guard2": {
+                "carry": null
+              },
+              "rookie": {
+                "carry": "envelope"
+              }
+            }
+          },
+          {
+            "at": 3.6,
+            "stage": {
+              "rookie": {
+                "face": "guard1"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "s7_l4": {
+      "id": "s7_l4",
+      "type": "line",
+      "shot": {
+        "cam": "ots:rookie>guard1"
+      },
+      "stage": {
+        "rookie": {
+          "carry": "envelope",
+          "face": "guard1"
+        },
+        "guard1": {
+          "carry": "package"
+        },
+        "guard2": {
+          "carry": null
+        }
+      }
+    },
+    "s7_leave": {
+      "id": "s7_leave",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 3.8,
+      "shot": {
+        "cam": "steps_side"
+      },
+      "stage": {
+        "guard1": {
+          "look": "rookie"
+        },
+        "guard2": {
+          "look": "rookie"
+        }
+      },
+      "cue": {
+        "timeline": [
+          {
+            "at": 0.2,
+            "stage": {
+              "rookie": {
+                "walk": [
+                  "drive_mid",
+                  "car_door"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    "s8_arrive": {
+      "id": "s8_arrive",
+      "type": "shot",
+      "env": "gym_ext",
+      "cinematic": true,
+      "hold": 4.6,
+      "shot": {
+        "cam": "ext_establish"
+      },
+      "stage": {
+        "rookie": {
+          "at": "street",
+          "face": 90,
+          "pose": "idle",
+          "carry": "envelope",
+          "look": null
+        },
+        "lucas": {
+          "at": "lucas_wait",
+          "face": "street",
+          "pose": "idle",
+          "carry": null,
+          "look": null
+        }
+      },
+      "cue": {
+        "music": null,
+        "ambience": "street",
+        "fade": 2,
+        "env": [
+          "night",
+          "doorsClose"
+        ],
+        "timeline": [
+          {
+            "at": 0.3,
+            "stage": {
+              "rookie": {
+                "walk": [
+                  "approach",
+                  "rookie_meet"
+                ],
+                "face": "lucas"
+              }
+            }
+          },
+          {
+            "at": 1.4,
+            "stage": {
+              "lucas": {
+                "face": "rookie",
+                "look": "rookie"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "s8_l1": {
+      "id": "s8_l1",
+      "type": "choice",
+      "choiceId": "handover",
+      "style": "dialogue",
+      "shot": {
+        "cam": "ext_meet"
+      },
+      "optionStaging": {
+        "done": {
+          "icon": "hand"
+        },
+        "told": {
+          "icon": "bolt"
+        },
+        "clean": {
+          "icon": "scales"
+        }
+      },
+      "stage": {
+        "rookie": {
+          "at": "rookie_meet",
+          "face": "lucas",
+          "pose": "idle",
+          "carry": "envelope",
+          "look": null
+        },
+        "lucas": {
+          "at": "lucas_wait",
+          "face": "rookie",
+          "pose": "idle",
+          "carry": null,
+          "look": null
+        }
+      }
+    },
+    "s8_l3": {
+      "id": "s8_l3",
+      "type": "choice",
+      "choiceId": "cut",
+      "style": "dialogue",
+      "shot": {
+        "cam": "ext_meet"
+      },
+      "optionStaging": {
+        "cut": {
+          "icon": "cash"
+        },
+        "thanks": {
+          "icon": "crown"
+        },
+        "what_now": {
+          "icon": "chat"
+        }
+      },
+      "cue": {
+        "timeline": [
+          {
+            "at": 0.35,
+            "stage": {
+              "lucas": {
+                "carry": null
+              }
+            }
+          }
+        ]
+      }
+    },
+    "s8_l5": {
+      "id": "s8_l5",
+      "type": "line",
+      "shot": {
+        "cam": "medium:lucas"
+      },
+      "stage": {
+        "rookie": {
+          "carry": null
+        },
+        "lucas": {
+          "carry": "cash"
+        }
+      },
+      "cue": {
+        "music": "resolve",
+        "fade": 3
+      }
+    },
+    "s8_r_thanks": {
+      "id": "s8_r_thanks",
+      "type": "line",
+      "shot": {
+        "cam": "medium:lucas"
+      },
+      "stage": {
+        "rookie": {
+          "carry": null
+        },
+        "lucas": {
+          "carry": "cash"
+        }
+      },
+      "cue": {
+        "music": "resolve",
+        "fade": 3
+      }
+    },
+    "s8_r_now": {
+      "id": "s8_r_now",
+      "type": "line",
+      "shot": {
+        "cam": "medium:lucas"
+      },
+      "stage": {
+        "rookie": {
+          "carry": null
+        },
+        "lucas": {
+          "carry": "cash"
+        }
+      },
+      "cue": {
+        "music": "resolve",
+        "fade": 3
+      }
+    },
+    "s8_cash": {
+      "id": "s8_cash",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 3.8,
+      "shot": {
+        "cam": "ext_meet"
+      },
+      "stage": {
+        "rookie": {
+          "at": "rookie_meet",
+          "face": "lucas",
+          "pose": "idle",
+          "carry": null
+        },
+        "lucas": {
+          "at": "lucas_wait",
+          "face": "rookie",
+          "pose": "idle",
+          "carry": "cash"
+        }
+      },
+      "cue": {
+        "timeline": [
+          {
+            "at": 0.3,
+            "stage": {
+              "rookie": {
+                "play": "interact"
+              }
+            }
+          },
+          {
+            "at": 1.25,
+            "stage": {
+              "lucas": {
+                "carry": null
+              },
+              "rookie": {
+                "carry": "cash"
+              }
+            }
+          },
+          {
+            "at": 2.6,
+            "stage": {
+              "rookie": {
+                "carry": null,
+                "play": "nod"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "s8_leave": {
+      "id": "s8_leave",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 4,
+      "shot": {
+        "cam": "ext_establish"
+      },
+      "stage": {
+        "rookie": {
+          "carry": null
+        },
+        "lucas": {
+          "carry": null,
+          "look": "rookie"
+        }
+      },
+      "cue": {
+        "timeline": [
+          {
+            "at": 0.2,
+            "stage": {
+              "rookie": {
+                "walk": [
+                  "approach",
+                  "street",
+                  [
+                    -8.2,
+                    -2.7
+                  ]
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    "s9_enter": {
+      "id": "s9_enter",
+      "type": "shot",
+      "env": "room",
+      "cinematic": true,
+      "hold": 6.4,
+      "shot": {
+        "cam": "room_enter"
+      },
+      "stage": {
+        "rookie": {
+          "at": "door_in",
+          "y": 0,
+          "face": 0,
+          "pose": "idle",
+          "carry": null,
+          "look": null
+        }
+      },
+      "cue": {
+        "ambience": "room",
+        "env": [
+          "lampOff",
+          "doorClose",
+          "phoneTable"
+        ],
+        "timeline": [
+          {
+            "at": 0.2,
+            "env": "doorOpen",
+            "sfx": "door_open"
+          },
+          {
+            "at": 0.5,
+            "stage": {
+              "rookie": {
+                "walk": [
+                  "inside",
+                  "sofa_way",
+                  "sofa_sit"
+                ],
+                "face": 90,
+                "pose": "sit"
+              }
+            }
+          },
+          {
+            "at": 1.5,
+            "env": "lampOn",
+            "sfx": "lamp_click"
+          },
+          {
+            "at": 2.4,
+            "env": "doorClose",
+            "sfx": "door_close"
+          }
+        ]
+      }
+    },
+    "s9_buzz": {
+      "id": "s9_buzz",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 2.6,
+      "shot": {
+        "cam": "table_phone_close"
+      },
+      "stage": {
+        "rookie": {
+          "at": "sofa_sit",
+          "y": 0,
+          "face": 90,
+          "pose": "sit",
+          "carry": null,
+          "look": "table_phone"
+        }
+      },
+      "cue": {
+        "env": [
+          "phoneTable",
+          "tablePhoneMessage:Lucas"
+        ],
+        "timeline": [
+          {
+            "at": 0.2,
+            "sfx": "phone_buzz"
+          }
+        ]
+      }
+    },
+    "s9_message": {
+      "id": "s9_message",
+      "type": "message",
+      "cinematic": true,
+      "shot": {
+        "cam": "sofa_wide"
+      },
+      "stage": {
+        "rookie": {
+          "at": "sofa_sit",
+          "y": 0,
+          "face": 90,
+          "pose": "sit",
+          "carry": null,
+          "look": "table_phone"
+        }
+      },
+      "cue": {
+        "env": [
+          "phoneTable",
+          "tablePhoneMessage:Lucas"
+        ]
+      }
+    },
+    "s9_reply": {
+      "id": "s9_reply",
+      "type": "choice",
+      "choiceId": "reply",
+      "style": "card",
+      "shot": {
+        "cam": "sofa_wide"
+      },
+      "optionStaging": {
+        "in": {
+          "icon": "crown"
+        },
+        "how": {
+          "icon": "eye"
+        },
+        "face_down": {
+          "icon": "bolt"
+        }
+      },
+      "stage": {
+        "rookie": {
+          "at": "sofa_sit",
+          "y": 0,
+          "face": 90,
+          "pose": "sit",
+          "carry": null,
+          "look": "table_phone"
+        }
+      }
+    },
+    "s9_end": {
+      "id": "s9_end",
+      "type": "shot",
+      "cinematic": true,
+      "hold": 5.4,
+      "shot": {
+        "cam": "sofa_wide"
+      },
+      "stage": {
+        "rookie": {
+          "at": "sofa_sit",
+          "y": 0,
+          "face": 90,
+          "pose": "sit",
+          "carry": null,
+          "look": "rest_look"
+        }
+      },
+      "cue": {
+        "music": "theme",
+        "fade": 3,
+        "timeline": [
+          {
+            "at": 3.8,
+            "fx": "blackout"
+          }
+        ],
+        "env": [
+          "tablePhoneDark"
+        ]
+      }
+    },
+    "s9_complete": {
+      "id": "s9_complete",
+      "type": "complete",
+      "cinematic": true
+    },
+    "s4_job": {
+      "id": "s4_job",
+      "type": "job",
+      "shot": {
+        "cam": "ext_meet"
+      },
+      "stage": {
+        "rookie": {
+          "at": "rookie_meet",
+          "face": "lucas",
+          "pose": "idle",
+          "carry": null,
+          "look": null
+        },
+        "lucas": {
+          "at": "lucas_wait",
+          "face": "rookie",
+          "pose": "idle",
+          "look": null
+        }
+      }
+    },
+    "s4_prep": {
+      "id": "s4_prep",
+      "type": "choice",
+      "choiceId": "s02_prep",
+      "style": "card",
+      "shot": {
+        "cam": "ext_meet"
+      },
+      "optionStaging": {
+        "book": {
+          "icon": "scales"
+        },
+        "back": {
+          "icon": "door"
+        },
+        "scout": {
+          "icon": "eye"
+        }
+      }
+    },
+    "s4_shop": {
+      "id": "s4_shop",
+      "type": "choice",
+      "choiceId": "s02_shop",
+      "style": "card",
+      "shot": {
+        "cam": "ext_meet"
+      },
+      "optionStaging": {
+        "knuckles": {
+          "icon": "fist"
+        },
+        "burner": {
+          "icon": "chat"
+        },
+        "save": {
+          "icon": "cash"
+        }
+      }
+    },
+    "s4_drive_back": {
+      "id": "s4_drive_back",
+      "type": "drive",
+      "env": "city",
+      "destination": "Pier Nine",
+      "distance": 480,
+      "shot": {
+        "cam": "drive_chase"
+      },
+      "cue": {
+        "music": "drive",
+        "ambience": "car",
+        "fade": 2
+      }
+    },
+    "s5_scout": {
+      "id": "s5_scout",
+      "type": "explore",
+      "stage": {
+        "sal": {
+          "at": "sal_wait",
+          "face": "threshold",
+          "pose": "idle"
+        }
+      },
+      "hotspots": [
+        {
+          "id": "sal",
+          "label": "Sal",
+          "icon": "chat",
+          "at": "sal_wait",
+          "stand": "threshold",
+          "face": "sal_wait",
+          "height": 2.15,
+          "ends": true
+        },
+        {
+          "id": "containers",
+          "label": "Containers",
+          "icon": "eye",
+          "at": "container_look",
+          "stand": "container_stand",
+          "face": "container_look",
+          "height": 1.2,
+          "lines": [
+            {
+              "speaker": "rookie",
+              "text": "Seals cut on this one, and the one next to it. Sal is moving something that isn't on anybody's books."
+            }
+          ],
+          "sets": {
+            "pier_seals": true
+          }
+        },
+        {
+          "id": "water",
+          "label": "The water",
+          "icon": "eye",
+          "at": "quay_edge",
+          "stand": "quay_stand",
+          "face": "quay_edge",
+          "height": 1.4,
+          "lines": [
+            {
+              "speaker": "rookie",
+              "text": "Lucas always says the water down here keeps secrets better than people do."
+            }
+          ]
+        }
+      ]
+    },
+    "s5_l0": {
+      "id": "s5_l0",
+      "type": "choice",
+      "choiceId": "sal_reply",
+      "style": "dialogue",
+      "shot": {
+        "cam": "dock_door"
+      },
+      "optionStaging": {
+        "half_ten": {
+          "icon": "chat"
+        },
+        "here": {
+          "icon": "scales"
+        },
+        "who_told": {
+          "icon": "eye"
+        }
+      },
+      "stage": {
+        "rookie": {
+          "at": "threshold",
+          "face": "sal",
+          "pose": "idle",
+          "look": null
+        },
+        "sal": {
+          "at": "sal_wait",
+          "face": "rookie",
+          "pose": "idle",
+          "look": null
+        }
+      }
+    },
+    "s5_l0_scout": {
+      "id": "s5_l0_scout",
+      "type": "choice",
+      "choiceId": "sal_reply",
+      "style": "dialogue",
+      "shot": {
+        "cam": "dock_door"
+      },
+      "optionStaging": {
+        "half_ten": {
+          "icon": "chat"
+        },
+        "here": {
+          "icon": "scales"
+        },
+        "who_told": {
+          "icon": "eye"
+        }
+      },
+      "stage": {
+        "rookie": {
+          "at": "threshold",
+          "face": "sal",
+          "pose": "idle",
+          "look": null
+        },
+        "sal": {
+          "at": "sal_wait",
+          "face": "rookie",
+          "pose": "idle",
+          "look": null
+        }
+      }
+    },
+    "s5_l0_back": {
+      "id": "s5_l0_back",
+      "type": "choice",
+      "choiceId": "sal_reply",
+      "style": "dialogue",
+      "shot": {
+        "cam": "dock_door"
+      },
+      "optionStaging": {
+        "half_ten": {
+          "icon": "chat"
+        },
+        "here": {
+          "icon": "scales"
+        },
+        "who_told": {
+          "icon": "eye"
+        }
+      },
+      "stage": {
+        "rookie": {
+          "at": "threshold",
+          "face": "sal",
+          "pose": "idle",
+          "look": null
+        },
+        "sal": {
+          "at": "sal_wait",
+          "face": "rookie",
+          "pose": "idle",
+          "look": null
+        }
+      }
+    },
+    "s5_r_half": {
+      "id": "s5_r_half",
+      "type": "line",
+      "shot": {
+        "cam": "dock_inside"
+      }
+    },
+    "s5_r_here": {
+      "id": "s5_r_here",
+      "type": "line",
+      "shot": {
+        "cam": "dock_inside"
+      }
+    },
+    "s5_r_who_told": {
+      "id": "s5_r_who_told",
+      "type": "line",
+      "shot": {
+        "cam": "dock_inside"
+      }
+    },
+    "s5_fee": {
+      "id": "s5_fee",
+      "type": "choice",
+      "choiceId": "sal_fee",
+      "style": "dialogue",
+      "shot": {
+        "cam": "dock_inside"
+      },
+      "optionStaging": {
+        "pay": {
+          "icon": "cash"
+        },
+        "lean": {
+          "icon": "fist"
+        },
+        "call": {
+          "icon": "chat"
+        }
+      }
+    },
+    "s5_r_pay": {
+      "id": "s5_r_pay",
+      "type": "line",
+      "shot": {
+        "cam": "dock_inside"
+      }
+    },
+    "s5_r_lean_seals": {
+      "id": "s5_r_lean_seals",
+      "type": "line",
+      "shot": {
+        "cam": "dock_inside"
+      }
+    },
+    "s5_r_lean_open": {
+      "id": "s5_r_lean_open",
+      "type": "line",
+      "shot": {
+        "cam": "dock_inside"
+      },
+      "gesture": "shake_head"
+    },
+    "s5_call_lucas": {
+      "id": "s5_call_lucas",
+      "type": "caption",
+      "shot": {
+        "cam": "dock_door"
+      }
+    },
+    "s7_arrive_clear": {
+      "id": "s7_arrive_clear",
+      "type": "shot",
+      "env": "estate",
+      "cinematic": true,
+      "hold": 5,
+      "shot": {
+        "cam": "drive_arrive"
+      },
+      "stage": {
+        "rookie": {
+          "show": false,
+          "carry": "package"
+        },
+        "guard1": {
+          "at": "door_guard",
+          "face": 180,
+          "pose": "idle",
+          "carry": null,
+          "look": null
+        },
+        "guard2": {
+          "at": "terrace_guard",
+          "face": 180,
+          "pose": "idle",
+          "carry": "envelope",
+          "look": null
+        }
+      },
+      "cue": {
+        "music": "tension",
+        "ambience": "rain",
+        "fade": 2,
+        "env": [
+          "noBanner",
+          "carArrive",
+          "houseCarGone"
+        ]
+      }
+    },
+    "s7_sedan": {
+      "id": "s7_sedan",
+      "type": "choice",
+      "choiceId": "s02_car",
+      "style": "card",
+      "shot": {
+        "cam": "house_car"
+      },
+      "optionStaging": {
+        "plate": {
+          "icon": "eye"
+        },
+        "ignore": {
+          "icon": "scales"
+        },
+        "knock": {
+          "icon": "fist"
+        }
+      }
+    },
+    "s7_knock": {
+      "id": "s7_knock",
+      "type": "caption",
+      "shot": {
+        "cam": "house_car"
+      },
+      "cue": {
+        "timeline": [
+          {
+            "at": 0.3,
+            "sfx": "knock"
+          },
+          {
+            "at": 2.2,
+            "sfx": "engine"
+          }
+        ]
+      }
+    },
+    "s7_known": {
+      "id": "s7_known",
+      "type": "line",
+      "shot": {
+        "cam": "ots:rookie>guard1"
+      }
+    },
+    "s7_r_knock": {
+      "id": "s7_r_knock",
+      "type": "line",
+      "shot": {
+        "cam": "steps_side"
+      }
+    },
+    "s8_cy": {
+      "id": "s8_cy",
+      "type": "choice",
+      "choiceId": "envelope_ask",
+      "style": "dialogue",
+      "shot": {
+        "cam": "ext_meet"
+      },
+      "cue": {
+        "timeline": [
+          {
+            "at": 0.35,
+            "stage": {
+              "rookie": {
+                "play": "interact"
+              }
+            }
+          },
+          {
+            "at": 1.3,
+            "stage": {
+              "rookie": {
+                "carry": null
+              },
+              "lucas": {
+                "carry": "envelope",
+                "look": null
+              }
+            }
+          }
+        ]
+      },
+      "optionStaging": {
+        "ask": {
+          "icon": "eye"
+        },
+        "wrong": {
+          "icon": "hand"
+        },
+        "nothing": {
+          "icon": "scales",
+          "say": false
+        }
+      }
+    },
+    "s8_r_cy": {
+      "id": "s8_r_cy",
+      "type": "line",
+      "shot": {
+        "cam": "medium:lucas"
+      },
+      "gesture": "shake_head"
+    },
+    "s8_r_wrong": {
+      "id": "s8_r_wrong",
+      "type": "line",
+      "shot": {
+        "cam": "medium:lucas"
+      }
+    },
+    "s9_answer": {
+      "id": "s9_answer",
+      "type": "message",
+      "cinematic": true,
+      "shot": {
+        "cam": "sofa_wide"
+      },
+      "stage": {
+        "rookie": {
+          "at": "sofa_sit",
+          "y": 0,
+          "face": 90,
+          "pose": "sit",
+          "carry": null,
+          "look": "table_phone"
+        }
+      }
+    }
+  }
+}

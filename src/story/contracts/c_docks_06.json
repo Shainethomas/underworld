@@ -1,0 +1,18 @@
+{
+  "id": "c_docks_06",
+  "kit": "docks",
+  "title": "Six Boxes Short",
+  "client": "Sal",
+  "risk": "Medium",
+  "pay": 600,
+  "respect": 20,
+  "mood": "greedy",
+  "pitch": "Victor's radios came out of Ines's chandlery six boxes short. She calls it a storage fee. Get the money for all six.",
+  "cast": {"contact": "widow", "heavy": "heavy2"},
+  "names": {"contact": "Ines", "heavy": "Jonah"},
+  "hotspots": {
+    "contact": "Ines",
+    "clue_a": {"label": "Container twenty-two", "lines": ["Six radio boxes, flattened, behind container twenty-two. Ines's shop tape on every one."]},
+    "clue_b": {"label": "The board at the steps", "lines": ["A chalk board at the water steps for the boatmen. Rope, diesel, and radios. Forty each."]}
+  }
+}

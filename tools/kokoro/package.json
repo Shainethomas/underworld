@@ -1,0 +1,9 @@
+{
+  "name": "underworld-kokoro",
+  "private": true,
+  "description": "Kokoro text-to-speech for scripts/build-voices.mjs, kept apart from the game's own dependencies",
+  "type": "module",
+  "dependencies": {
+    "kokoro-js": "^1.2.1"
+  }
+}

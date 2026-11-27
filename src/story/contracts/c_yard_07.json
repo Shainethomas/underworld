@@ -1,0 +1,18 @@
+{
+  "id": "c_yard_07",
+  "kit": "yard",
+  "title": "The Engine Shed",
+  "client": "Victor",
+  "risk": "High",
+  "pay": 1300,
+  "respect": 38,
+  "mood": "proud",
+  "pitch": "Tanner ran for Victor once. Now he strips cars in the engine shed under Varga's wing. Victor wants his share.",
+  "cast": { "contact": "kid", "heavy": "heavy" },
+  "names": { "contact": "Tanner", "heavy": "Szabo" },
+  "hotspots": {
+    "contact": "Tanner",
+    "clue_a": { "label": "The boxcar", "lines": ["Car parts stripped and crated, numbers ground off. A Varga chalk mark on every crate."] },
+    "clue_b": { "label": "The van", "lines": ["A payment book in the burned-out van. Tanner hands Varga half of everything. Not a partner. A tenant."] }
+  }
+}

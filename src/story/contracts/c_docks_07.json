@@ -1,0 +1,18 @@
+{
+  "id": "c_docks_07",
+  "kit": "docks",
+  "title": "Berth Times",
+  "client": "Lucas",
+  "risk": "High",
+  "pay": 1400,
+  "respect": 40,
+  "mood": "greedy",
+  "pitch": "Zeke ties up boats on Pier Nine and sells Victor's berth times to the Varga crew. Collect what they paid him.",
+  "cast": {"contact": "kid", "heavy": "heavy"},
+  "names": {"contact": "Zeke", "heavy": "Bruno"},
+  "hotspots": {
+    "contact": "Zeke",
+    "clue_a": {"label": "Container thirty-one", "lines": ["Chalk inside container thirty-one. Victor's berth times for the month, copied out neatly. Zeke's tidy hand."]},
+    "clue_b": {"label": "The quay ladder", "lines": ["A phone in a plastic bag, tied under the quay ladder. One number saved. Not one of Victor's."]}
+  }
+}

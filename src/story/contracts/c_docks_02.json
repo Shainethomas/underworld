@@ -1,0 +1,18 @@
+{
+  "id": "c_docks_02",
+  "kit": "docks",
+  "title": "Friday's Game",
+  "client": "Lucas",
+  "risk": "Low",
+  "pay": 250,
+  "respect": 12,
+  "mood": "greedy",
+  "pitch": "Lenny lost big at Victor's Friday card game and paid with a promise. Now he wants a discount. Collect the full debt.",
+  "cast": {"contact": "dealer", "heavy": "heavy2"},
+  "names": {"contact": "Lenny", "heavy": "Gus"},
+  "hotspots": {
+    "contact": "Lenny",
+    "clue_a": {"label": "Container twelve", "lines": ["A card table inside container twelve. Chairs for eight, a cash box, and a sign: house takes ten percent."]},
+    "clue_b": {"label": "The launch at the steps", "lines": ["A brand new outboard on Lenny's launch, the price tag still on the cowl. A man with that isn't broke."]}
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "c_docks_04",
+  "kit": "docks",
+  "title": "What Edith Saw",
+  "client": "Lucas",
+  "risk": "High",
+  "pay": 1000,
+  "respect": 32,
+  "mood": "scared",
+  "pitch": "A boat Victor paid for came in early and left empty. Edith keeps the watch hut. She saw who met it, and she's terrified.",
+  "cast": {"contact": "widow", "heavy": "heavy2"},
+  "names": {"contact": "Edith", "heavy": "Vasko"},
+  "hotspots": {
+    "contact": "Edith",
+    "clue_a": {"label": "Container forty", "lines": ["Container forty, seal broken, empty. The floor's still wet with seawater. That cargo came off a boat tonight."]},
+    "clue_b": {"label": "The bollard", "lines": ["A mooring rope on the bollard, cut clean and still wet. A boat tied up here tonight and left in a hurry."]}
+  }
+}

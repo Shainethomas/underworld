@@ -1,0 +1,18 @@
+{
+  "id": "c_estate_03",
+  "kit": "estate",
+  "title": "Marker Due",
+  "client": "Lucas",
+  "risk": "Medium",
+  "pay": 650,
+  "respect": 22,
+  "mood": "greedy",
+  "pitch": "Julian Marsh signed a marker at Victor's card table. It's a month overdue and he wants to renegotiate. Don't let him.",
+  "cast": { "contact": "dealer", "heavy": "heavy2" },
+  "names": { "contact": "Julian Marsh", "heavy": "Bram" },
+  "hotspots": {
+    "contact": "Julian Marsh",
+    "clue_a": { "label": "The fountain", "lines": ["A chip from Victor's card room at the bottom of the fountain, dated Monday. Marsh has been back at the tables this week."] },
+    "clue_b": { "label": "The coupe by the house", "lines": ["A signed offer on the passenger seat. Marsh is selling the car on Friday, for more than he owes Victor."] }
+  }
+}

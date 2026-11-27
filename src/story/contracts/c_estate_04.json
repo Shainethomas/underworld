@@ -1,0 +1,18 @@
+{
+  "id": "c_estate_04",
+  "kit": "estate",
+  "title": "Son and Heir",
+  "client": "Lucas",
+  "risk": "High",
+  "pay": 1200,
+  "respect": 36,
+  "mood": "proud",
+  "pitch": "Jasper Wren runs Varga business out of his father's house, on Victor's hill. Victor wants twelve hundred and an apology.",
+  "cast": { "contact": "kid", "heavy": "heavy" },
+  "names": { "contact": "Jasper", "heavy": "Kristof" },
+  "hotspots": {
+    "contact": "Jasper",
+    "clue_a": { "label": "The fountain", "lines": ["A sandwich bag of wet notes wedged under the fountain's lip, banded in Varga red. Jasper's drop, in his father's garden."] },
+    "clue_b": { "label": "His father's car", "lines": ["A letter from the family lawyer in the glovebox. One more incident and Jasper is cut off. Signed by his father."] }
+  }
+}

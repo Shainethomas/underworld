@@ -1,0 +1,18 @@
+{
+  "id": "c_docks_03",
+  "kit": "docks",
+  "title": "The Stamp",
+  "client": "Sal",
+  "risk": "Medium",
+  "pay": 700,
+  "respect": 22,
+  "mood": "proud",
+  "pitch": "Kell stamps customs papers for Sal's boats. He's holding Thursday's set until Victor comes to ask. Victor isn't coming.",
+  "cast": {"contact": "dealer", "heavy": "heavy"},
+  "names": {"contact": "Kell", "heavy": "Piotr"},
+  "hotspots": {
+    "contact": "Kell",
+    "clue_a": {"label": "Container three", "lines": ["Customs papers pinned inside container three. Kell's stamp, dated next week. He's selling it to someone besides Sal."]},
+    "clue_b": {"label": "Under the gangway", "lines": ["A biscuit tin under the gangway. Kell's stamps and inks inside. His whole trade, kept out by the water."]}
+  }
+}

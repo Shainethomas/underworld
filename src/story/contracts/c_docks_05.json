@@ -1,0 +1,18 @@
+{
+  "id": "c_docks_05",
+  "kit": "docks",
+  "title": "The Gate",
+  "client": "Lucas",
+  "risk": "Low",
+  "pay": 350,
+  "respect": 14,
+  "mood": "proud",
+  "pitch": "Walter charges every night lorry to pass the Pier Nine gate and hasn't paid Victor a penny of it. Collect the share.",
+  "cast": {"contact": "fence", "heavy": "heavy2"},
+  "names": {"contact": "Walter", "heavy": "Dunc"},
+  "hotspots": {
+    "contact": "Walter",
+    "clue_a": {"label": "Container nine", "lines": ["Chalk tallies down the side of container nine. Walter counts every lorry. Forty this week, at a toll a time."]},
+    "clue_b": {"label": "The water steps", "lines": ["A cash tin wrapped in oilcloth under the water steps. Walter's real takings. More than he ever tells Sal."]}
+  }
+}

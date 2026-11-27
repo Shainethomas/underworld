@@ -1,0 +1,18 @@
+{
+  "id": "c_estate_02",
+  "kit": "estate",
+  "title": "The Housekeeper",
+  "client": "Lucas",
+  "risk": "Low",
+  "pay": 250,
+  "respect": 12,
+  "mood": "scared",
+  "pitch": "Mrs Pruett keeps house for the Ashdowns and passes on Victor's envelope. This month she didn't. Find out why, gently.",
+  "cast": { "contact": "widow", "heavy": "heavy2" },
+  "names": { "contact": "Mrs Pruett", "heavy": "Carrick" },
+  "hotspots": {
+    "contact": "Mrs Pruett",
+    "clue_a": { "label": "The fountain", "lines": ["Small wet footprints run from the fountain to the kitchen door. Something's tucked under the basin lip, wrapped in a bread bag."] },
+    "clue_b": { "label": "The car by the house", "lines": ["An old hatchback, mud on the tyres, crisps and seed packets on the seat. The gardener's. Nobody's watching anybody."] }
+  }
+}

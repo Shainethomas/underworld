@@ -1,0 +1,18 @@
+{
+  "id": "c_estate_05",
+  "kit": "estate",
+  "title": "Finder's Fee",
+  "client": "Lucas",
+  "risk": "Low",
+  "pay": 350,
+  "respect": 14,
+  "mood": "greedy",
+  "pitch": "Lowell Pike sold a portrait through Victor's contacts. He swears it went cheap and the fee should shrink. Collect it all.",
+  "cast": { "contact": "fence", "heavy": "heavy2" },
+  "names": { "contact": "Lowell Pike", "heavy": "Gorman" },
+  "hotspots": {
+    "contact": "Lowell Pike",
+    "clue_a": { "label": "The fountain", "lines": ["An empty crate propped on the fountain wall, an auction house stencil and a lot number on the lid. A public sale, not a quiet one."] },
+    "clue_b": { "label": "The estate car", "lines": ["Empty frames in the back, a sale slip on the dash. The portrait went for four times what Pike told Victor."] }
+  }
+}

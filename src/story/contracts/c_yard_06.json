@@ -1,0 +1,18 @@
+{
+  "id": "c_yard_06",
+  "kit": "yard",
+  "title": "The Yardmaster's Key",
+  "client": "Lucas",
+  "risk": "Medium",
+  "pay": 550,
+  "respect": 20,
+  "mood": "scared",
+  "pitch": "The old yardmaster held the key to Victor's stash. He's dead. His widow has it, and strangers have been asking.",
+  "cast": { "contact": "widow", "heavy": "heavy2" },
+  "names": { "contact": "Mrs Vell", "heavy": "Jory" },
+  "hotspots": {
+    "contact": "Mrs Vell",
+    "clue_a": { "label": "The boxcar", "lines": ["Fresh gouges round the padlock on the platform locker by the boxcar. Somebody's tried it without a key."] },
+    "clue_b": { "label": "The van", "lines": ["A packed suitcase hidden in the burned-out van, a train ticket on top. She's leaving town tomorrow."] }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "c_yard_04",
+  "kit": "yard",
+  "title": "Boxcar Nine",
+  "client": "Lucas",
+  "risk": "High",
+  "pay": 1100,
+  "respect": 35,
+  "mood": "greedy",
+  "pitch": "Victor's hijacked load is in a boxcar on Mrs Doran's siding. She wants paying to release it, and Varga's bidding too.",
+  "cast": { "contact": "widow", "heavy": "heavy2" },
+  "names": { "contact": "Mrs Doran", "heavy": "Bela" },
+  "hotspots": {
+    "contact": "Mrs Doran",
+    "clue_a": { "label": "The boxcar", "lines": ["The seal on nine's been cut and tied back with her wire. Two cases short. She's already helped herself."] },
+    "clue_b": { "label": "The van", "lines": ["A Varga card on the van seat, a figure on the back. Eight hundred. That's the price she's trying to beat."] }
+  }
+}

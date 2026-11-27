@@ -1,0 +1,18 @@
+{
+  "id": "c_yard_01",
+  "kit": "yard",
+  "title": "The Copper Run",
+  "client": "Lucas",
+  "risk": "Low",
+  "pay": 300,
+  "respect": 15,
+  "mood": "greedy",
+  "pitch": "Dez strips copper out of the old signal boxes and owes Victor a cut. He's late. Collect it.",
+  "cast": { "contact": "fence", "heavy": "heavy" },
+  "names": { "contact": "Dez", "heavy": "Teo" },
+  "hotspots": {
+    "contact": "Dez",
+    "clue_a": { "label": "The boxcar", "lines": ["Spools of copper wire, stacked to the roof. That's not a month's work. That's three."] },
+    "clue_b": { "label": "The van", "lines": ["A buyer's receipt on the dash. Dez got paid on Tuesday. Cash."] }
+  }
+}
